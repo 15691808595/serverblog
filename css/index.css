@@ -1,0 +1,37 @@
+
+.my-addon{
+    background-color:#fff;
+    border-radius: 0px;
+
+}
+.my-addon:hover{
+    background-color:#eee;
+    cursor: pointer;
+}
+.my-input-group>input{
+    border-radius: 0px!important;
+}
+.btn-success{
+    border-radius: 0px;
+}
+.list-group-item>a{
+    text-decoration:none;
+    color:#555!important;
+}
+.post-item-container{
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #d9d9d9;
+}
+.post-item-container>h4{
+    margin-bottom:30px;
+}
+.post-item-container>h4>a{
+    color: #337ab7;
+    text-decoration: none;
+    font-size:18px;
+}
+.post-item-container>h4>a:hover{
+    color: #23527c;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,128 @@
+*,body{
+    font-family: 微软雅黑,Microsoft YaHei,宋体,Tahoma,Helvetica,Arial,sans-serif;
+    font-size:16px;
+}
+body{
+    position:relative;
+    padding-bottom:110px;
+    background:transparent;
+    background-color:rgba(255,255,255,0.3);
+}
+@media (max-width: 768px) {
+    .online-contact-container,.site-state-container,#music-wrapper,#post-btn,.advertisement{
+        display: none;
+    }
+}
+
+
+/*导航条自定义样式*/
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 14px;
+}
+.nav-main{
+    background-color:#34495e;
+    height:50px;
+    min-height:50px;
+    padding:0;
+    margin-bottom:110px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.24);
+}
+#my-collapse{
+    background-color:#34495e;
+}
+
+.my-brand{
+    color:#fff!important;
+}
+.right-nav>a,.dropdown>a{
+    color:#fff!important;
+}
+.main-container{
+    padding-top:80px;
+    min-height: 800px;
+}
+@media (max-width: 768px) {
+    .main-container{
+        padding-top:30px;
+        min-height: 600px;
+    }
+}
+/*修改bootstrap默认样式*/
+.page-header{
+    margin-top:0;
+    color:#333;
+}
+.container{
+    padding-right:15px;
+    padding-left:15px;
+}
+
+/*文章发布按钮*/
+.post-action,.post-action:hover{
+    color:#fff;
+    text-decoration: none;
+}
+
+/*表单输入框和按钮去圆角效果*/
+.form-horizontal input{
+    border-radius:0px;
+}
+.form-horizontal button{
+    border-radius:0px;
+}
+/*网站底部样式*/
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 48px;
+    background: #263238;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .footer{
+        padding: 10px 48px;
+    }
+}
+/*注册表单样式*/
+.login-form,.register-form{
+    padding-left:0px;
+    padding-right:0px;
+}
+
+
+/*文章详情页*/
+.article-info{
+    margin:25px 0;
+}
+.article-info>ul{
+    padding:0;
+}
+.article-info>ul>li{
+    margin:0 15px;
+}
+
+/*点赞图标样式*/
+.zan{
+    color:#34495e;
+    cursor:pointer;
+}
+.num-zan{
+    height:28px;
+    line-height:28px;
+    font-size:20px;
+    padding-right:10px;
+}
+
+/*文章发布页*/
+form:nth-child(1){
+    margin-bottom:25px;
+}
+@media (max-width: 768px) {
+    .my-login{
+        float: none !important;
+    }
+}
