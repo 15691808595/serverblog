@@ -1,3 +1,24 @@
+/*彩色logo*/
+.logoname {
+    font-family: 'Open Sans', sans-serif, "宋体";
+    font-size: 2.5rem;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 120%;
+    background-image: -webkit-linear-gradient(left, #df21f5, skyblue 25%, orange 50%, #000a80 75%, #df21f5);
+    animation: content-animation 4s infinite linear;
+}
+
+@keyframes content-animation {
+    0% {
+        background-position: 0, 0
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
 
 .my-addon{
     background-color:#fff;

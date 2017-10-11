@@ -2,7 +2,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top nav-main">
     <div class="container" >
         <div class="navbar-header">
-            <a href="index.php" class="animated navbar-brand my-brand" title="刘伟波的个人博客 &raquo; 刘伟波-天天向上">LOGO</a>
+            <a href="index.php" class="animated navbar-brand my-brand logoname " title="刘伟波的个人博客 &raquo; 刘伟波-天天向上">LWB</a>
             <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -10,12 +10,16 @@
             </button>
         </div>
         <div class="collapse navbar-collapse navbar-collapse-responsive" id="my-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="echarts.php" target="_blank">集成图表</a></li>
-                <li class="dropdown"><a href="map.php" target="_blank">高德地图</a></li>
-                <li class="dropdown"><a href="https://15691808595.github.io/" target="_blank">我的github</a></li>
-                <li class="dropdown"><a href="http://47.94.132.72:8084/" target="_blank">node相册</a></li>
-                <li class="dropdown"><a href="http://47.94.132.72:8083/" target="_blank">node游戏页面</a></li>
+            <ul class="nav navbar-nav" style="margin-left: 30px">
+                <li class="dropdown"><a href="home.php">网站首页</a></li>
+                <li class="dropdown"><a href="index.php">前端技术</a></li>
+                <li class="dropdown"><a href="javascript:;">生活与创作</a></li>
+                <li class="dropdown"><a href="contact.php">建议与反馈</a></li>
+<!--                <li class="dropdown"><a href="echarts.php" target="_blank">集成图表</a></li>-->
+<!--                <li class="dropdown"><a href="map.php" target="_blank">高德地图</a></li>-->
+<!--                <li class="dropdown"><a href="https://15691808595.github.io/" target="_blank">我的github</a></li>-->
+<!--                <li class="dropdown"><a href="http://47.94.132.72:8084/" target="_blank">node相册</a></li>-->
+<!--                <li class="dropdown"><a href="http://47.94.132.72:8083/" target="_blank">node游戏页面</a></li>-->
             </ul>
             <ul class="nav navbar-nav pull-right my-login">
                 <!-- 通过session动态判断用户是否登录 -->

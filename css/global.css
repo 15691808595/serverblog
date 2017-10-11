@@ -14,13 +14,12 @@ body{
     }
 }
 
-
-/*导航条自定义样式*/
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 14px;
+::selection {
+    color: #fff;
+    color: rgba(255,255,255,.85);
+    background: #ea4c89;
 }
+/*导航条自定义样式*/
 .nav-main{
     background-color:#34495e;
     height:50px;
@@ -42,6 +41,9 @@ body{
 .main-container{
     padding-top:80px;
     min-height: 800px;
+}
+.nav > li > a {
+    padding-right:14px;
 }
 @media (max-width: 768px) {
     .main-container{
@@ -77,8 +79,8 @@ body{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    padding: 20px 48px;
+    bottom: -49px;
+    padding: 18px 48px;
     background: #263238;
     color: #fff;
 }

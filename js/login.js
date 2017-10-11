@@ -5,9 +5,8 @@ $("#submit").click(function () {
     var username = $("[name='username']").val();
     var password = $("[name='password']").val();
     var isRemember = $("[name='isRemember']").is(":checked");
-    var reg=/^[\u2E80-\u9FFF]+[\w]*$/;
-    if(username.length == 0 || password.length == 0 || !reg.test(username)){
-        $(".my-modal-body").html("用户名或密码不能为空,或者用户名非法！");
+    if(username.length == 0 || password.length == 0){
+        $(".my-modal-body").html("用户名或密码不能为空！");
         $("#myModal").modal("show");
         setTimeout(function () {
             $("#myModal").modal("hide");

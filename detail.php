@@ -21,6 +21,7 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>
@@ -221,5 +222,7 @@ tagName4;
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/detailSetSeo.js"></script>
+<!--推荐-->
+<script src="./js/recommend.js"></script>
 </body>
 </html>

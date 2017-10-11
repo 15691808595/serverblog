@@ -47,7 +47,7 @@ while($row = mysql_fetch_assoc($result)){
 }
 
 $resArr['total'] = $total;  //将总页数添加返回结果集最后一条
-
+$resArr['pageNum'] = $pageNum;
 
 
 echo json_encode($resArr);  //返回结果集json字符串

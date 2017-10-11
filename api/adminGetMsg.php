@@ -1,7 +1,8 @@
 ﻿<?php
 include_once "dbConnect.php";
 
-$sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`recommend` from article2 order by createTime desc";
+
+$sql = "select `id`,`name`,`email`,`qq`,`tel`,`msg`,`createTime` from user_item order by createTime desc";
 
 $result = mysql_query($sql);
 

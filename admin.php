@@ -10,6 +10,7 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>
@@ -26,20 +27,49 @@ include_once "./tpl/modal.php";
 ?>
 <h2 class="page-header text-center" style="margin-top: 100px">后台管理系统</h2>
 <div class="container col-sm-8 col-sm-offset-2">
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
-            <tr>
+    <div>
 
-            </tr>
-        </thead>
-        <tbody class="text-center">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">文章管理</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">留言管理</a></li>
+        </ul>
 
-        </tbody>
-    </table>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                <table id="article" class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    </tbody>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="profile">
+                <table id="msg" class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
 <script src="js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/admin.js"></script>
+<script src="js/adminMessage.js"></script>
 </body>
 </html>

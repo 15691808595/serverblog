@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 
     <!--[if lt IE 9]>
@@ -49,6 +50,58 @@
             to{
                 transform: rotateZ(360deg);
             }
+        }
+
+
+
+
+        /*分页插件*/
+
+        .page_div {
+            margin: 0 auto;
+            width: 710px;
+            font-size: 15px;
+            color: #666666;
+        }
+        /*
+         * 页数按钮样式
+         */
+        .page_div a {
+            min-width: 30px;
+            height: 28px;
+            border: 1px solid #dce0e0!important;
+            text-align: center;
+            margin: 0 4px;
+            cursor: pointer;
+            line-height: 28px;
+            color: #666666;
+            font-size: 13px;
+            display: inline-block;
+        }
+        #firstPage,
+        #lastPage {
+            width: 50px;
+            color: #0073A9;
+            border: 1px solid #0073A9!important;
+        }
+        #prePage,
+        #nextPage {
+            width: 70px;
+            color: #0073A9;
+            border: 1px solid #0073A9!important;
+        }
+        .page_div .current {
+            background-color: #0073A9;
+            border-color: #0073A9;
+            color: #FFFFFF;
+        }
+        .totalPages {
+            margin: 0 10px;
+        }
+        .totalPages span,
+        .totalSize span {
+            color: #0073A9;
+            margin: 0 5px;
         }
 
     </style>
@@ -88,14 +141,11 @@
 
                         </div>
                         <!--分页栏-->
-                        <ul class="pagination pagination-sm">
-                            <li class="pagination-first page-item"><a class="first" href="javascript:">首页</a></li>
-                            <li class="pagination-prev page-item"><a class="prev" href="javascript:">上一页</a></li>
-                            <!--显示当前页码-->
-                            <li class="pagination-page page-item"><a href="javascript:;" class="current-page">1</a></li>
-                            <li class="pagination-next page-item"><a class="next" href="javascript:">下一页</a></li>
-                            <li class="pagination-last page-item"><a class="last" href="javascript:">尾页</a></li>
-                        </ul>
+                        <div class="col-sm-12 paging">
+                            <div id="page" class="page_div"></div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -113,6 +163,7 @@
 <script id="tpl" type="text/x-jquery-tmpl">
     <div class="post-item-container">
         <h4><a href="detail.php?id=${id}" target="_blank">${title}</a> <img src="./img/${img}" height="24" width="24" class="pull-right"/></h4>
+        <p>${content}</p>
         <p class="text-danger">
             ${user}&nbsp;&nbsp;&nbsp;&nbsp; ${createTime}&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="glyphicon glyphicon-eye-open"></i>&nbsp;${visitor}&nbsp;&nbsp;&nbsp;&nbsp;
@@ -121,6 +172,9 @@
     </div>
 </script>
 <!--分页-->
+<script type="text/javascript" src="js/paging.js"></script>
+<script>
+</script>
 <script src="./js/page.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
@@ -130,5 +184,8 @@
 <script src="./js/search.js"></script>
 <!--音乐功能-->
 <script src="./js/musicControl.js"></script>
+<!--推荐-->
+<script src="./js/recommend.js"></script>
+
 </body>
 </html>

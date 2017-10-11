@@ -3,6 +3,7 @@
  */
 var num = 1;  //保存当前的页码，默认是1
 var total = 0; //保存总的页数
+var pageNum=0; //获取每一页的分页数
 
 //默认加载第一页数据
 getPage(num);
@@ -15,10 +16,12 @@ function getPage(num) {
         type:"get",
         url:"./api/getArticle.php",
         data:{num:num,type:type,wd:wd},
+        async:false,
         success:function (data, status, xhr) {
             var result = JSON.parse(data);
             //将结果集中的总页数赋值给total全局变量
             total = result.total;
+            pageNum = result.pageNum;
             //添加之前现将文章列表容器里的内容清空
             $(".list-container").html("");
             //将文章列表数据遍历并添加到文章列表容器里
@@ -34,9 +37,20 @@ function getPage(num) {
         }
     });
 }
-
+//分页
+$("#page").paging({
+    pageNo:num,
+    totalPage: total,
+    totalSize: total*pageNum,
+    callback: function(_num) {
+        // alert(num)
+        num=_num;
+        getPage(num);
+        moveTop();
+    }
+});
 //绑定下一页点击事件
-$(".next").click(function () {
+$(document).on("click","#nextPage",function () {
     //判断当前页是否为最后一页
     if(num == total){
         $(".my-modal-body").html("当前已是最后一页");
@@ -53,7 +67,7 @@ $(".next").click(function () {
     moveTop();
 });
 //绑定上一页点击事件
-$(".prev").click(function () {
+$(document).on("click","#prePage",function () {
     if(num == 1){
         //修改模态框的提示内容
         $(".my-modal-body").html("当前已是第一页");
@@ -73,14 +87,14 @@ $(".prev").click(function () {
 
 
 //首页点击事件
-$(".first").click(function () {
+$(document).on("click","#firstPage",function () {
     getPage(1);
     $('.current-page').html(1);
     moveTop();
 });
 
 //尾页点击事件
-$(".last").click(function () {
+$(document).on("click","#lastPage",function () {
     getPage(total);
     $('.current-page').html(total);
     moveTop();
@@ -92,3 +106,4 @@ function moveTop() {
         scrollTop:0
     },500)
 }
+

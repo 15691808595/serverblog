@@ -1,0 +1,74 @@
+
+body{
+    background-image: url('../img/home/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment:fixed;
+}
+.address a {
+    text-decoration: none;
+}
+.contact {
+    width: 75%;
+    padding: 1rem 0 0;
+    text-align: center;
+    color: white;
+    margin:0 auto;
+    font-family: "宋体";
+    font-size:20px;
+}
+.clear {
+    clear: both;
+}
+.form-control {
+    background:rgba(255, 255, 255, 0.05);
+}
+
+
+.form-group input{
+    margin-bottom: 1rem;
+}
+
+.btn {
+    width: 15%;
+    margin-top: 1rem;
+}
+
+
+.disco:hover {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: disco;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: disco;
+}
+@-webkit-keyframes disco {
+    0%    { -webkit-filter: drop-shadow(0 0 8px rgba(255,153,153,1)); }
+    25%  { -webkit-filter: drop-shadow(0 0 8px rgba(244,241,66,1)); }
+    50%  { -webkit-filter: drop-shadow(0 0 8px rgba(0,153,255,1)); }
+    75%  { -webkit-filter: drop-shadow(0 0 8px rgba(244,66,232,1)); }
+    100%    { -webkit-filter: drop-shadow(0 0 8px rgba(255,153,153,1)); }
+}
+
+.icon-location {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.icon-email {
+    display: inline-block;
+    width: 39px;
+    height: 24px;
+}
+.icon-phone {
+    display: inline-block;
+    width: 37px;
+    height: 35px;
+}
+
+.contact-footer h1 {
+    line-height: 32px;
+}

@@ -19,11 +19,13 @@ function getAlltitle() {
                 <td class="text-center">${key}</td>
                 `;
             }
-            thead+=`<td class="text-center">操作</td>`;
+            thead+=`<td class="text-center">推荐位</td>
+                    `;
             //添加标题
-            $("thead tr").append(thead);
+            $("#article thead tr").append(thead);
             $.each(json,function (i,ele) {
                 let tbody="";
+
                 tbody+=`
                 <tr >
                     <td>${ele.id}</td>
@@ -32,19 +34,29 @@ function getAlltitle() {
                     <td style="width: 180px">${ele.createTime}</td>
                     <td>${ele.like}</td>
                     <td>${ele.visitor}</td>
-                    <td>${ele.img}</td>
-                    <td id="del_${ele.id}" style="width: 60px;color: #337ab7;cursor: pointer;">删除</td>
+                    <td>${ele.img}</td>`;
+
+                        if(ele.recommend==1){
+                            tbody+=`<td id="recommend_${ele.id}" class="recommend_yes">已推荐</td>`;
+                        }else{
+                            tbody+=`<td id="recommend_${ele.id}" class="recommend_no">未推荐</td>`;
+                        }
+
+                    tbody+=`<td  id="del_${ele.id}" >删除</td>
                 </tr>
                 `;
+
+
                 //添加内容
-                $("tbody").append(tbody);
+                $("#article tbody").append(tbody);
             })
         }
     });
 }
+// 点击删除文章
 $(function () {
-    $("tbody tr td").on("click",function () {
-        var id=$(this).attr("id").substring(4);
+    $(document).on("click","[id*=del_]",function () {
+        var id=$(this).attr("id").substring($(this).attr("id").indexOf("_")+1);
         $.ajax({
             url:"./api/delArticle.php",
             type:"get",
@@ -62,4 +74,37 @@ $(function () {
             }
         })
     })
-})
+});
+
+// 点击是否推荐
+$(function () {
+    $(document).on("click","[id*=recommend_]",function () {
+        var id=$(this).attr("id").substring($(this).attr("id").indexOf("_")+1);
+        var bool=0,_html=$(this).html();
+
+        if(_html=="未推荐"){
+            $(this).html("已推荐").removeClass("recommend_no").addClass("recommend_yes");
+            bool=1;
+        }else {
+            $(this).html("未推荐").removeClass("recommend_yes").addClass("recommend_no");
+            bool=0;
+        }
+        $.ajax({
+            url:"./api/recommend.php",
+            type:"get",
+            data:{id,bool},
+            success:function (data) {
+
+                if(data==="0"){
+                    $(".my-modal-body").html("只有博客的主人刘伟波才可以推荐哦,您点击是没有用的哦！");
+                    $("#myModal").modal("show");
+                    setTimeout(function () {
+                        $("#myModal").modal("hide");
+                    },1200);
+                }
+
+
+            }
+        })
+    })
+});

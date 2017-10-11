@@ -12,7 +12,7 @@ $(".search").click(function () {
         },1200);
         return false;
     }
-    $("#type").data("type","title");
+    $("#type").data("type","content");
     getPage(1)
 });
 
@@ -28,4 +28,4 @@ $("[name='wd']").on('input',function () {
     if (document.form1.wd.focus){
         document.form1.wd.select();
     }
-});;
+});

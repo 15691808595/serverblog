@@ -1,4 +1,13 @@
 ﻿<div class="col-sm-3">
+
+    <ul id="recommend" class="list-group" >
+<!--        推荐文章-->
+        <li class="list-group-item">推荐文章</li>
+
+
+
+
+    </ul>
     <div class="social-channel-container">
         <!--个人资料-->
         <?php
