@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/paging.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 
     <!--[if lt IE 9]>
@@ -30,81 +32,6 @@
     <script src="./js/respond.js"></script>
     <![endif]-->
 
-    <!--    音乐样式-->
-    <style>
-        .container{
-            position: relative;
-        }
-        #musicControl{
-            position: absolute;
-            left: -25px;
-            top: 34px;
-            cursor: pointer;
-            animation: loop 4s linear 0s infinite;
-        }
-        @keyframes loop
-        {
-            from{
-                transform: rotateZ(0deg);
-            }
-            to{
-                transform: rotateZ(360deg);
-            }
-        }
-
-
-
-
-        /*分页插件*/
-
-        .page_div {
-            margin: 0 auto;
-            width: 710px;
-            font-size: 15px;
-            color: #666666;
-        }
-        /*
-         * 页数按钮样式
-         */
-        .page_div a {
-            min-width: 30px;
-            height: 28px;
-            border: 1px solid #dce0e0!important;
-            text-align: center;
-            margin: 0 4px;
-            cursor: pointer;
-            line-height: 28px;
-            color: #666666;
-            font-size: 13px;
-            display: inline-block;
-        }
-        #firstPage,
-        #lastPage {
-            width: 50px;
-            color: #0073A9;
-            border: 1px solid #0073A9!important;
-        }
-        #prePage,
-        #nextPage {
-            width: 70px;
-            color: #0073A9;
-            border: 1px solid #0073A9!important;
-        }
-        .page_div .current {
-            background-color: #0073A9;
-            border-color: #0073A9;
-            color: #FFFFFF;
-        }
-        .totalPages {
-            margin: 0 10px;
-        }
-        .totalPages span,
-        .totalSize span {
-            color: #0073A9;
-            margin: 0 5px;
-        }
-
-    </style>
 </head>
 <body>
 <?php
@@ -161,6 +88,10 @@
 <script src="./bootstrap/js/bootstrap.js"></script>
 <script src="./js/jquery.tmpl.js"></script>
 <script id="tpl" type="text/x-jquery-tmpl">
+
+
+
+
     <div class="post-item-container">
         <h4><a href="detail.php?id=${id}" target="_blank">${title}</a> <img src="./img/${img}" height="24" width="24" class="pull-right"/></h4>
         <p>${content}</p>

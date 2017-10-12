@@ -15,21 +15,21 @@
     color: deeppink;
     cursor: pointer;
 }
-#recommend li{
+.recommend li{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-#recommend a{
+.recommend a{
     font-size: 14px ;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-#recommend li a:hover{
+.recommend li a:hover{
     color: #ea4c89 !important;
 }
-#recommend  span{
+.recommend  span{
     font-size: 12px;
     color: #a5a5a5;
 }

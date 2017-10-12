@@ -7,21 +7,21 @@ $(function () {
         url:"./api/adminGetMsg.php",
         type:"get",
         success:function (data, xhr) {
-            console.log(data)
-            var arr=JSON.parse(data);
-            var json=arr.list;
-            var thead='';
-            for(var key in json[0]){
-                thead+=`
+            if(data!=="0"){
+                var arr=JSON.parse(data);
+                var json=arr.list;
+                var thead='';
+                for(var key in json[0]){
+                    thead+=`
                 <td class="text-center">${key}</td>
                 `;
-            }
-            //添加标题
-            $("#msg thead tr").append(thead);
-            $.each(json,function (i,ele) {
-                let tbody="";
+                }
+                //添加标题
+                $("#msg thead tr").append(thead);
+                $.each(json,function (i,ele) {
+                    let tbody="";
 
-                tbody+=`
+                    tbody+=`
                 <tr >
                     <td>${ele.id}</td>
                     <td style="width: 100px">${ele.name}</a></td>
@@ -36,9 +36,11 @@ $(function () {
 
 
 
-                //添加内容
-                $("#msg tbody").append(tbody);
-            })
+                    //添加内容
+                    $("#msg tbody").append(tbody);
+                })
+            }
+
         }
     });
 });

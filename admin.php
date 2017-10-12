@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>

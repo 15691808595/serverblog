@@ -55,6 +55,8 @@ session_start();
                                     <option value="mysql">mysql</option>
                                     <option value="server">服务器</option>
                                     <option value="others">其他</option>
+                                    <option value="interesting">生活搞笑</option>
+                                    <option value="fight">激励向上</option>
                                 </select>
                             </div>
                         </div>

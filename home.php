@@ -30,26 +30,6 @@ session_start();
     <script src="./js/respond.js"></script>
     <![endif]-->
 
-    <style>
-        .lead{
-            overflow-x: hidden;
-        }
-        #recommend .list-group-item{
-            padding: 0;
-            background: none;
-            border: none;
-        }
-        #recommend .list-group-item a{
-            padding: 0;
-            background: none;
-            border: none;
-            font-size: 16px !important;
-            color: #fff !important;
-        }
-        .mt30{
-            margin-top: 30px;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,16 +54,53 @@ session_start();
                                     <div class="col-md-5">
                                         <div class="intro">
                                             <div class="my-line">
-                                                <h3 style="font-size: 14px">激励搞笑 TOP 8</h3>
-                                                <ul>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
-                                                    <li>123</li>
+                                                <h3 style="font-size: 14px">激励搞笑 TOP 10</h3>
+                                                <ul class="recommend flash">
+
+                                                    <li class="list-group-item" >
+                                                        <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+
+                                                    <li class="list-group-item" >
+                                                        <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+                                                    <li class="list-group-item" >
+                                                        <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                        <span>15 Views</span>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -146,11 +163,16 @@ session_start();
                                 <div class="intro">
                                     <div class="my-line">
                                         <h3 class="text-center">生活搞笑</h3>
-                                        <ul>
-                                            <li>123</li>
-                                            <li>123</li>
-                                            <li>123</li>
-                                            <li>123</li>
+                                        <ul class="recommend">
+
+                                            <li class="list-group-item">
+                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                <span>15 Views</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                <span>15 Views</span>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -159,7 +181,7 @@ session_start();
                                 <div class="my-intro">
                                     <div class="my-line">
                                         <h3 class="text-center">前端推荐</h3>
-                                        <ul id="recommend">
+                                        <ul id="recommend" class="recommend">
 
                                         </ul>
 
@@ -170,11 +192,30 @@ session_start();
                                 <div class="my-intro">
                                     <div class="my-line">
                                         <h3 class="text-center">激励向上</h3>
-                                        <ul>
-                                            <li style="list-style: disc">123</li>
-                                            <li>123</li>
-                                            <li>123</li>
-                                            <li>123</li>
+                                        <ul class="recommend">
+
+                                            <li class="list-group-item" >
+                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                <span>15 Views</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                <span>15 Views</span>
+                                            </li>
+
+                                            <li class="list-group-item" >
+                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
+                                                <span>15 Views</span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                <span>15 Views</span>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
+                                                <span>15 Views</span>
+                                            </li>
                                         </ul>
 
                                     </div>

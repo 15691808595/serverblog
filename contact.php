@@ -29,22 +29,6 @@ session_start();
     <script src="./js/respond.js"></script>
     <![endif]-->
 
-    <style>
-        .lead{
-            overflow-x: hidden;
-        }
-        #tips{
-            width: 100%;
-            padding-left: 15px;
-            line-height: 25px;
-            font-size: 12px;
-            text-align: left;
-            color: #999;
-        }
-        #tips.error{
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
@@ -72,10 +56,11 @@ session_start();
                 </div>
                 <div class="clear"></div>
                 <div class="col-md-12">
-						<textarea class="form-control" name="message" style="min-height: 260px" placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（400字以内），感谢您对博主的支持。(必填)" title="发送消息...(必填)"
+						<textarea class="form-control" name="message"  placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（400字以内），感谢您对博主的支持。(必填)" title="发送消息...(必填)"
                                    ></textarea>
                 </div>
-                <button id="btn" class="btn btn-info disco">SUBMIT</button>
+                <div class="col-sm-12">
+                    <button id="btn" class="btn btn-info disco">SUBMIT</button></div>
             </div>
         </form>
         <div class="contact-footer">
@@ -106,38 +91,6 @@ session_start();
 <!--定时器-->
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>
-<script>
-    $(function () {
-        //阻止表单提交跳转页面
-        $("#btn").click(function () {
-            //获取需要发布的文章信息（标题，url,内容）
-            var d = {};
-            var t = $('form').serializeArray();
-            $.each(t, function () {
-                d[this.name] = this.value;
-            });
-            if(d.username == '' || d.qq == '' ||d.message == ''){
-                $("#tips").addClass("error").text("*姓名，qq和消息不能为空");
-                return false;
-            }
-            $.ajax({
-                type: "post",
-                url: "./api/contact.php",
-                data: {
-                    username: d.username,
-                    email: d.email,
-                    qq: d.qq,
-                    phone:d.phone,
-                    message:d.message,
-                },
-                success: function (data, status, xhr) {
-                    alert(data)
-                }
-            });
-
-            return false;
-        });
-    })
-</script>
+<script src="./js/contact.js"></script>
 </body>
 </html>
