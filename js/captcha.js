@@ -2,7 +2,7 @@
  * Created by Qing on 2017/6/7.
  */
 //HTML5里只要是在表单里的按钮，点击都会触发表达提交事件
-$("#reGet").click(function () {
+$("#captcha").click(function () {
     //点击实现验证码刷新（本质上是改变验证码图片的src属性）
     $("#captcha").attr('src','./api/captcha.php?random='+new Date().getTime());
     //通过更改随机传参的方式，改变验证码的src属性，从而达到属性验证码图片的目的

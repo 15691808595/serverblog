@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/music.css">
     <link rel="stylesheet" href="css/paging.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 
@@ -44,14 +43,8 @@
     echo "<span id='type' data-type='{$type}' style='display: none;'></span>";
 ?>
 <div class="container main-container">
-    <?php
-        include_once "./tpl/music.php";
-    ?>
-    <div class="advertisement text-center">
-        <h1 class="h1">
-            欢迎来到刘伟波的个人博客
-        </h1>
-    </div>
+    
+
     <div class="container">
         <div class="row">
             <?php
@@ -93,7 +86,7 @@
 
 
     <div class="post-item-container">
-        <h4><a href="detail.php?id=${id}" target="_blank">${title}</a> <img src="./img/${img}" height="24" width="24" class="pull-right"/></h4>
+        <h4><a href="detail.php?id=${id}" >${title}</a> <img src="./img/${img}" height="24" width="24" class="pull-right"/></h4>
         <p>${content}</p>
         <p class="text-danger">
             ${user}&nbsp;&nbsp;&nbsp;&nbsp; ${createTime}&nbsp;&nbsp;&nbsp;&nbsp;
@@ -113,8 +106,6 @@
 <script src="./js/common.js"></script>
 <!--搜索功能-->
 <script src="./js/search.js"></script>
-<!--音乐功能-->
-<script src="./js/musicControl.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
 

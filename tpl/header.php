@@ -25,21 +25,21 @@
                     $username = $_SESSION['username'];
                     if($username=="刘伟波"){
                         echo <<<tagName1
-                        <li class="right-nav"><a href="admin.php" target="_blank">{$username}</a></li>
-                        <li class="right-nav"><a href="logout.php" target="_blank">退出</a></li>
+                        <li class="right-nav"><a href="admin.php" >{$username}</a></li>
+                        <li class="right-nav"><a href="logout.php" >退出</a></li>
 tagName1;
                     }else{
                         echo <<<tagName1
                         <li class="right-nav"><a href="javascript:;">{$username}</a></li>
-                        <li class="right-nav"><a href="logout.php" target="_blank">退出</a></li>
+                        <li class="right-nav"><a href="logout.php" >退出</a></li>
 tagName1;
                     }
 
                 }else{
                     //未登录
                     echo <<<tagName2
-                         <li class="right-nav"><a href="login.php" target="_blank">登录</a></li>
-                         <li class="right-nav"><a href="register.php" target="_blank">注册</a></li>
+                         <li class="right-nav"><a href="login.php" >登录</a></li>
+                         <li class="right-nav"><a href="register.php" >注册</a></li>
 tagName2;
                 }
                 ?>

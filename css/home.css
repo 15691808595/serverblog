@@ -2,7 +2,7 @@
 body{
     background-image: url('../img/home/bg.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-attachment:fixed;
 }
 .address a {
@@ -184,6 +184,35 @@ ul {
 }
 
 
+/*视频*/
+#media video{
+    /*background: url("../img/mv.jpg") no-repeat;*/
+    border: 1px solid pink;
+}
+@media (max-width: 768px){
+    #media video{
+        width: 100%;
+    }
+}
+@media (min-width: 768px ){
+    #media video{
+        width: 60%;
+        margin-top: 10%;
+    }
+}
+@media (min-width: 996px ){
+    #media video{
+        width: 105%;
+        margin-top: 10%;
+    }
+}
+@media (min-width: 1366px ){
+    #media video{
+        width: 105%;
+        margin-top: 2%;
+    }
+}
+
 /*增加*/
 .my-line h3{
     color: #fff;
@@ -194,6 +223,10 @@ ul {
 }
 .lead{
     overflow-x: hidden;
+}
+.recommend-height{
+    height: 106px;
+    overflow-y: hidden;
 }
 .recommend .list-group-item{
     counter-increment: flashIndex;

@@ -2,10 +2,13 @@
     font-family: 微软雅黑,Microsoft YaHei,宋体,Tahoma,Helvetica,Arial,sans-serif;
     font-size:16px;
 }
+html{
+    height: 100%;
+}
 body{
     position:relative;
-    padding-bottom:110px;
-    background:transparent;
+    min-height:100%;
+    padding-bottom:85px;
     background-color:rgba(255,255,255,0.3);
 }
 @media (max-width: 768px) {
@@ -22,16 +25,13 @@ body{
 /*导航条自定义样式*/
 .nav-main{
     background-color:#34495e;
-    height:50px;
-    min-height:50px;
+    height:51px;
     padding:0;
-    margin-bottom:110px;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.24);
 }
-#my-collapse{
-    background-color:#34495e;
+#my-collapse {
+    background-color: #34495e;
 }
-
 .my-brand{
     color:#fff!important;
 }
@@ -40,7 +40,6 @@ body{
 }
 .main-container{
     padding-top:80px;
-    min-height: 800px;
 }
 .nav > li > a {
     padding-right:14px;
@@ -48,7 +47,6 @@ body{
 @media (max-width: 768px) {
     .main-container{
         padding-top:30px;
-        min-height: 600px;
     }
 }
 /*修改bootstrap默认样式*/
@@ -77,16 +75,15 @@ body{
 /*网站底部样式*/
 .footer{
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -49px;
-    padding: 18px 48px;
-    background: #263238;
+    width: 100%;
+    bottom: 0;
+    padding: 18px 0;
+    background-color: #263238;
     color: #fff;
 }
 @media (max-width: 768px) {
     .footer{
-        padding: 10px 48px;
+        padding: 10px 0;
     }
 }
 /*注册表单样式*/
@@ -94,7 +91,18 @@ body{
     padding-left:0px;
     padding-right:0px;
 }
-
+@media (max-width: 768px) {
+    .register-form .panel-body {
+        padding-bottom: 0;
+    }
+    .register-form label{
+        margin-top: 6px;
+        padding-right: 5px;
+    }
+    .register-form .no-pad{
+        padding: 0;
+    }
+}
 
 /*文章详情页*/
 .article-info{
@@ -126,5 +134,8 @@ form:nth-child(1){
 @media (max-width: 768px) {
     .my-login{
         float: none !important;
+    }
+    .email-tips{
+        font-size: 12px;
     }
 }

@@ -2,7 +2,7 @@
 include_once "dbConnect.php";
 //获取页码
 $num = $_REQUEST['num'];  //页码
-$pageNum = 9;  //每页所包含的记录条数
+$pageNum = 11;  //每页所包含的记录条数
 $type = $_REQUEST['type'];
 $wd = $_REQUEST['wd'];
 

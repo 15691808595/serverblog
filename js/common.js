@@ -14,7 +14,3 @@ $(".my-brand").mouseover(function () {
 }).mouseout(function () {
     $(this).removeClass("rotateIn");
 });
-//个人广告
-setTimeout(function () {
-    $(".advertisement").slideUp();
-},3500);

@@ -36,7 +36,7 @@
 <div class="container main-container  animated bounceInRight">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12  register-form">
+            <div class="col-xs-12  register-form">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2 class="panel-title">用户注册</h2>
@@ -44,59 +44,56 @@
                     <div class="panel-body">
                         <form action="./api/register.php"  method="post" class="form-horizontal">
                             <div class="form-group">
-                                <label class="control-label col-sm-3">用户名</label>
-                                <div class="col-sm-9">
+                                <label class="control-label col-xs-3">用户名</label>
+                                <div class="col-xs-9">
                                     <input type="text" name="username" class="form-control" placeholder="用户名4到32个字符">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">昵&nbsp;&nbsp;&nbsp;&nbsp;称</label>
-                                <div class="col-sm-9">
+                                <label class="control-label col-xs-3">昵&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+                                <div class="col-xs-9">
                                     <input type="text" name="nickName" class="form-control" placeholder="昵称2到32个字符">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">常用邮箱</label>
-                                <div class="col-sm-9">
+                                <label class="control-label col-xs-3">常用邮箱</label>
+                                <div class="col-xs-9">
                                     <input type="text" name="email" class="form-control" placeholder="输入常用邮箱，验证后才能登陆">
                                     <p class="help-block">
                                 </div>
-                                <div class="col-sm-10 col-sm-offset-2">
-                                    <p class="text-danger">【如果您未在收件箱收到验证邮件，请到垃圾箱查收。】</p>
+                                <div class="col-md-10 col-md-offset-2 col-xs-12">
+                                    <p class="text-danger email-tips">【如果您未在收件箱收到验证邮件，请到垃圾箱查收。】</p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">密码</label>
-                                <div class="col-sm-9">
+                                <label class="control-label col-xs-3">密码</label>
+                                <div class="col-xs-9">
                                     <input type="password" name="pass" class="form-control" placeholder="密码至少8位">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">重复密码</label>
-                                <div class="col-sm-9">
+                                <label class="control-label col-xs-3">重复密码</label>
+                                <div class="col-xs-9">
                                     <input type="password" name="repass" class="form-control" placeholder="重复密码，两次输入必须一致">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">验证码</label>
-                                <div class="col-sm-3">
+                                <label class="control-label col-xs-3">验证码</label>
+                                <div class="col-md-3 col-xs-4">
                                     <input type="text" name="captcha" id="inputCaptcha" class="form-control" placeholder="验证码">
                                 </div>
-                                <div class="col-sm-1">
+                                <div class="col-xs-1 no-pad" >
                                     <!--输入正确时的提示信息-->
                                     <span class="right" style="color:green;font-size:20px;display: none;">√</span>
                                     <!--输入错误时的提示信息-->
                                     <span class="error" style="color:red;font-size:20px;display: none;">×</span>
                                 </div>
-                                <div class="col-sm-2">
+                                <div class="col-xs-2 no-pad">
                                     <img id="captcha" src="./api/captcha.php" alt="验证码">
-                                </div>
-                                <div class="col-sm-1">
-                                    <button id="reGet" class="btn btn-primary">换一张</button>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-9 col-sm-offset-3">
+                                <div class="col-xs-9 col-xs-offset-3">
                                     <button id="submit" class="btn btn-success" >注册</button>
                                 </div>
                             </div>

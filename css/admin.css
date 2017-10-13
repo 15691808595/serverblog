@@ -4,6 +4,10 @@
     cursor: pointer;
 }
 
+.recommend_height{
+    height: 260px;
+    overflow: hidden;
+}
 .recommend_no {
     width: 100px;
     color: #337ab7;

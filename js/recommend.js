@@ -16,6 +16,7 @@ function getRanArr(obj) {
 }
 
 function getRecommend() {
+    // $("#recommend").html("");
     $.ajax({
         type: "get",
         url: "./api/showRecommend.php",
@@ -25,9 +26,10 @@ function getRecommend() {
             var ranArr=getRanArr(obj);
             $.each(obj,function (i,ele) {
                 if(ranArr.indexOf(i)>=0){
-                    html+=`<li class="list-group-item"><a href="detail.php?id=${ele.id}" target="_blank" title="${ele.title}">${ele.title}</a> <span>${ele.visitor} Views</span></li>`;
+                    html+=`<li class="list-group-item"><a href="detail.php?id=${ele.id}"  title="${ele.title}">${ele.title}</a> <span>${ele.visitor} Views</span></li>`;
                 }
             });
+
             $("#recommend").append(html);
         },
     });

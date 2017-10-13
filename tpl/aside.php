@@ -1,6 +1,6 @@
 ﻿<div class="col-sm-3">
 
-    <ul id="recommend" class="list-group" >
+    <ul id="recommend" class="list-group recommend recommend_height" >
 <!--        推荐文章-->
         <li class="list-group-item">推荐文章</li>
 
