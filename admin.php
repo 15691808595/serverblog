@@ -32,13 +32,14 @@ include_once "./tpl/modal.php";
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">文章管理</a></li>
-            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">留言管理</a></li>
+            <li class="active"><a href="#home"   data-toggle="tab">文章管理</a></li>
+            <li><a href="#profile"   data-toggle="tab">留言管理</a></li>
+            <li><a href="#visitor"   data-toggle="tab">浏览记录</a></li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="home">
+            <div class="tab-pane fade in active" id="home">
                 <table id="article" class="table table-bordered table-hover table-striped">
                     <thead>
                     <tr>
@@ -50,7 +51,7 @@ include_once "./tpl/modal.php";
                     </tbody>
                 </table>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="profile">
+            <div class="tab-pane fade" id="profile">
                 <table id="msg" class="table table-bordered table-hover table-striped">
                     <thead>
                     <tr>
@@ -62,6 +63,25 @@ include_once "./tpl/modal.php";
                     </tbody>
                 </table>
             </div>
+            <div class="tab-pane fade" id="visitor">
+                <div class="visitor clearfix">
+                    <h4>总记录：<span>121</span></h4>
+                    <h4>月记录：<span>121</span></h4>
+                    <h4>昨日记录：<span>121</span></h4>
+                    <h4>今日记录：<span>121</span></h4>
+                </div>
+                <table id="visit" class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    </tbody>
+                </table>
+
+            </div>
         </div>
 
     </div>
@@ -72,5 +92,7 @@ include_once "./tpl/modal.php";
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/adminMessage.js"></script>
+<script src="js/adminVisitor.js"></script>
+<script src="js/adminAllVisitor.js"></script>
 </body>
 </html>

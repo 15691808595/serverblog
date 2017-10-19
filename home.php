@@ -33,11 +33,23 @@ session_start();
 </head>
 
 <body>
+
 <?php
-    include_once "./tpl/header.php";
+include_once "./api/dbConnect.php";
+include_once "./tpl/header.php";
 
+//每次浏览网站时，浏览次数加1
+
+$sql = "update visitor_counter set `all`=`all`+1 where id=1";
+
+mysql_query($sql);
+
+
+$createTime=time();
+$sql="insert into visitor_ip(address,ip,createTime) values ('上海','127.7.7.7','$createTime')";
+
+mysql_query($sql);
 ?>
-
 <div class=" main-container">
     <div>
         <div class="col-md-2"></div>
@@ -87,8 +99,8 @@ session_start();
                                             </li>
                                             <li>
                                                 <ul class="line-inblock">
-                                                    <li>地址</li>
-                                                    <li>陕西西安</li>
+                                                    <li>就职</li>
+                                                    <li><a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_parent">上海龙帛信息技术有限公司</a></li>
                                                 </ul>
                                             </li>
                                             <li>

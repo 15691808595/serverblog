@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav" style="margin-left: 30px">
                 <li class="dropdown"><a href="home.php">网站首页</a></li>
                 <li class="dropdown"><a href="index.php">前端技术</a></li>
-                <li class="dropdown"><a href="javascript:;">生活与创作</a></li>
+                <li class="dropdown"><a href="life.php">生活与创作</a></li>
                 <li class="dropdown"><a href="contact.php">建议与反馈</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right my-login">

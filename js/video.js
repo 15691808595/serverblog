@@ -22,9 +22,5 @@ $(function () {
            $("video").attr("src","mp4/"+video_arr[$(this).index()]+".mp4")
        }
 
-       setInterval(function () {
-           // console.log($("video")[0].duration);
-       },1000)
-
    })
 });
