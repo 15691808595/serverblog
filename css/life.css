@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.life-box{
+    margin-bottom: 40px;
+}
+.life-box .title{
+    margin: 0;
+}
+.life-box .title a{
+    font-size: 24px;
+    color: #337ab7;
+    text-decoration: none;
+}
+.life-box .time{
+    font-size: 12px;
+    color: #777;
+}
+.life-box .short{
+    margin: 16px 0;
+    font-size: 16px;
+    color: #333;
+}
+.life-box .read-all a{
+    font-weight: bold;
+    color: #34538b;
+}
+/*-------------------------------------------------------------------右侧*/
+.myself{
+    width: 336px;
+}
+.myself  .my-info {
+    width: 256px;
+    padding-left: 8px;
+    font-size: 12px;
+}
+.myself  .my-info p{
+    margin: 0;
+    font-size: 12px;
+}
+.myself  .my-info  a{
+    font-size: 12px;
+}
+.myself  .my-img, .myself .my-info{
+    float: left;
+}
+
+/*---------------------------------------------------------------------文章推荐*/
+.tit-good{
+    width: 336px;
+    margin-top: 20px;
+}
+.tit-good strong{
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+.tit-good li{
+    position: relative;
+    line-height: 15px;
+}
+.tit-good li:before{
+    position: absolute;
+    top:0;
+    left: -12px;
+    content: "<";
+    font-size: 12px;
+    color:#34538b;
+}
+.tit-good li a{
+    font-size: 13px;
+    color:#34538b;
+}
+.tit-good li span{
+    font-size: 13px;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
