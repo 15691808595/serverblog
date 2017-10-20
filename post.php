@@ -67,6 +67,11 @@ session_start();
                             <input type="text" class="form-control" name="url" placeholder="原文的URL链接地址">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" name="short" id="short" placeholder="简短介绍"></textarea>
+                        </div>
+                    </div>
                     <!--文章内容在线编辑器-->
                     <div class="form-group">
                         <div class="col-sm-12">
@@ -99,6 +104,8 @@ session_start();
 <!--定时器-->
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>
+<!--推荐-->
+<script src="./js/recommend.js"></script>
 </body>
 
 </html>

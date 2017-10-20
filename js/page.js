@@ -25,13 +25,7 @@ function getPage(num) {
             //添加之前现将文章列表容器里的内容清空
             $(".list-container").html("");
             //将文章列表数据遍历并添加到文章列表容器里
-            var newArr=[];
-            $.each(result.list,function (i,ele) {
-                if(ele.type!=="interesting" && ele.type!=="fight"){
-                    newArr.push(result.list[i])
-                }
-            });
-            $("#tpl").tmpl(newArr).prependTo(".list-container");
+            $("#tpl").tmpl(result.list).prependTo(".list-container");
             $.each($(".post-item-container>h4>a"),function (index,ele) {
                 if(wd==ele.innerHTML){
                     console.log(111);

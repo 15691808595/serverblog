@@ -19,7 +19,7 @@ function getAlltitle() {
                 <td class="text-center">${key}</td>
                 `;
             }
-            thead+=`<td class="text-center">推荐位</td>
+            thead+=`<td class="text-center">操作</td>
                     `;
             //添加标题
             $("#article thead tr").append(thead);

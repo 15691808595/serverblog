@@ -35,6 +35,15 @@ li{
     font-weight: bold;
     color: #34538b;
 }
+.life-box .release{
+    margin-top: 4px;
+    color: #777;
+    font-size: 14px;
+}
+.life-box .release span{
+    color: #34538b;
+    font-size: 14px;
+}
 /*-------------------------------------------------------------------右侧*/
 .myself{
     width: 336px;
@@ -86,7 +95,11 @@ li{
     color: #777;
 }
 
-
+.list-group-item{
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+}
 
 
 

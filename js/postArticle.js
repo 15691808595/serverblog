@@ -7,6 +7,7 @@ $("#submit").click(function () {
     var title = $("[name='title']").val();
     var url = $("[name='url']").val();
     var type = $("[name='articleType']").val();
+    var short= $("[name='short']").val();
 
     //获取在线编辑器的html内容
     var content = editor.$txt.html();
@@ -15,7 +16,7 @@ $("#submit").click(function () {
     $.ajax({
         type:"post",
         url:"./api/postArticle.php",
-        data:{title:title,url:url,content:content,text:text,type:type},
+        data:{title:title,url:url,content:content,text:text,type:type,short:short},
         success:function (data, status, xhr) {
             $(".my-modal-body").html(data);
             $("#myModal").modal("show");

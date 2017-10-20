@@ -2,10 +2,24 @@
  * Created by Administrator on 2017/10/13 0013.
  */
 $(function () {
-   var txt_arr=["我的大一420宿舍生活实录","小米视频测试","马云吹过的牛，如今都变成了现实"];
-   var video_arr=["420style","mi","http://v1-tt.ixigua.com/4f26d11814baa663a817caf040168feb/59e08cd2/video/m/2206395cc5a30ba4e9db909ca7fde57517b115126f00000448cba01bc71/"];
+    var txt_arr=[];
+    var video_arr=[];
+    $.ajax({
+        url:"./api/adminGetVideo.php",
+        type:"get",
+        async:false,
+        success:function (data, xhr) {
+            if(data!=="0"){
+                var arr=JSON.parse(data);
+                $.each(arr.list,function (i,ele) {
+                    txt_arr[i]=ele.name;
+                    video_arr[i]=ele.url;
+                })
+            }
+        }
+    });
    var html="";
-   $.each(txt_arr,function (i,ele) {
+   $.each(txt_arr.reverse(),function (i,ele) {
        html+=`
                 <li class="list-group-item" >
                     <a href="javascript:;" >${ele}</a>
@@ -13,12 +27,13 @@ $(function () {
    });
 
    $("#video-title").html(html);
-   var reg=new RegExp("http://","g");
-   console.log(reg.test(video_arr[2]));
+   var reg=new RegExp("http");
    $(document).on("click","#video-title li",function () {
+       video_arr=video_arr.reverse();
        if(reg.test(video_arr[$(this).index()])){
            $("video").attr("src",video_arr[$(this).index()])
        }else {
+           console.log("mp4/"+video_arr[$(this).index()]+".mp4");
            $("video").attr("src","mp4/"+video_arr[$(this).index()]+".mp4")
        }
 

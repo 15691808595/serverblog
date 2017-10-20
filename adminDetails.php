@@ -76,22 +76,28 @@ $row['createTime'] = date("Y-m-d H:i",$row['createTime']);
                     <!--原文其他信息-->
                     <div class="form-group">
                         <div class="col-sm-1">
-                            <input type="text" class="form-control" name="id"  placeholder="原文的id" value="{$row['id']}">
+                            <input type="text" class="form-control" name="id" readonly  placeholder="原文的id" value="{$row['id']}">
                         </div>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="user" placeholder="原文的user" value="{$row['user']}">
+                            <input type="text" class="form-control" name="user" readonly placeholder="原文的user" value="{$row['user']}">
                         </div>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="createTime" placeholder="原文的createTime" value="{$row['createTime']}">
+                            <input type="text" class="form-control" name="createTime" readonly placeholder="原文的createTime" value="{$row['createTime']}">
                         </div>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="visitor" placeholder="原文的visitor" value="{$row['visitor']}">
+                            <input type="text" class="form-control" name="visitor" readonly placeholder="原文的visitor" value="{$row['visitor']}">
                         </div>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="like" placeholder="原文的like" value="{$row['like']}">
+                            <input type="text" class="form-control" name="like" readonly placeholder="原文的like" value="{$row['like']}">
                         </div>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="img" placeholder="原文的img" value="{$row['img']}">
+                            <input type="text" class="form-control" name="img" readonly placeholder="原文的img" value="{$row['img']}">
+                        </div>
+                    </div>
+                    <!--原文文章简介-->
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="short" placeholder="原文文章简介" value="{$row['short']}">
                         </div>
                     </div>
                     <!--文章内容在线编辑器-->

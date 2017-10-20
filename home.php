@@ -61,7 +61,7 @@ mysql_query($sql);
                             <div class="col-md-8 col-sm-12">
                                 <div class="row">
                                     <div id="media" class="col-md-7" >
-                                        <video src="mp4/mi.mp4" controls></video>
+                                        <video src="mp4/420style.mp4" controls></video>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="intro">
@@ -132,16 +132,9 @@ mysql_query($sql);
                                 <div class="intro">
                                     <div class="my-line">
                                         <h3 class="text-center">生活搞笑</h3>
-                                        <ul class="recommend  recommend-height">
+                                        <ul id="interesting" class="recommend  recommend-height fight-and-interesting">
 
-                                            <li class="list-group-item">
-                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
-                                                <span>15 Views</span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
-                                                <span>15 Views</span>
-                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -161,30 +154,9 @@ mysql_query($sql);
                                 <div class="my-intro">
                                     <div class="my-line">
                                         <h3 class="text-center">激励向上</h3>
-                                        <ul class="recommend recommend-height">
+                                        <ul id="fight" class="recommend recommend-height fight-and-interesting">
 
-                                            <li class="list-group-item" >
-                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
-                                                <span>15 Views</span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
-                                                <span>15 Views</span>
-                                            </li>
 
-                                            <li class="list-group-item" >
-                                                <a href="detail.php?id=113" target="_blank" title="Vue+MySQL+Express小demo">Vue+MySQL+Express小demo</a>
-                                                <span>15 Views</span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
-                                                <span>15 Views</span>
-                                            </li>
-
-                                            <li class="list-group-item">
-                                                <a href="detail.php?id=114" target="_blank" title="npm安装的node_modules用rimraf来删除">npm安装的node_modules用rimraf来删除</a>
-                                                <span>15 Views</span>
-                                            </li>
                                         </ul>
 
                                     </div>
@@ -213,5 +185,7 @@ mysql_query($sql);
 <script src="./js/recommend.js"></script>
 <!--视频控制-->
 <script src="./js/video.js"></script>
+<!--搞笑和激励-->
+<script src="./js/fightAndInteresting.js"></script>
 </body>
 </html>

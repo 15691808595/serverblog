@@ -32,9 +32,10 @@ include_once "./tpl/modal.php";
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li class="active"><a href="#home"   data-toggle="tab">文章管理</a></li>
+            <li  class="active"><a href="#home"   data-toggle="tab">文章管理</a></li>
             <li><a href="#profile"   data-toggle="tab">留言管理</a></li>
             <li><a href="#visitor"   data-toggle="tab">浏览记录</a></li>
+            <li><a href="#video"   data-toggle="tab">视频添加</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -82,6 +83,36 @@ include_once "./tpl/modal.php";
                 </table>
 
             </div>
+            <div class="tab-pane fade " id="video">
+
+                <form id="videoForm" action="" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="videoTitle" placeholder="视频标题" value="">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="videoUrl" placeholder="视频url" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button id="submit" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </form>
+
+                <table id="videoShow" class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    </tbody>
+                </table>
+
+            </div>
         </div>
 
     </div>
@@ -94,5 +125,7 @@ include_once "./tpl/modal.php";
 <script src="js/adminMessage.js"></script>
 <script src="js/adminVisitor.js"></script>
 <script src="js/adminAllVisitor.js"></script>
+<script src="js/postVideo.js"></script>
+<script src="js/adminVideoShow.js"></script>
 </body>
 </html>

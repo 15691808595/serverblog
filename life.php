@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,13 +38,9 @@
 	<div class="container main-container animated bounceInRight">
 		<div class="container">
 			<div class="row">
-                <div class="col-sm-9">
-                    <div class="life-box">
-                        <h2 class="title"><a href="">我的第一篇生活文章</a></h2>
-                        <div class="time">2017年10月9日 by 刘伟波 阅读 895 次, 点赞 31 次</div>
-                        <div class="short">分享下我认为2017年最佳4月新番和最佳7月新番。</div>
-                        <div class="read-all"><a href="">阅读全文...</a></div>
-                    </div>
+                <div id="life-list" class="col-sm-9">
+
+
                 </div>
                 <div class="col-sm-3">
                     <div class="myself clearfix">
@@ -49,9 +48,9 @@
                             <img src="img/user/header-my.jpg" width="80" alt="">
                         </div>
                         <div class="my-info">
-                            刘伟波 <sup><a href="">more</a></sup>，16年毕业于
+                            刘伟波 <sup><a href="detail.php?id=135">more</a></sup>，16年毕业于
                             <a href="http://www.xawl.org/" title="http://www.xawl.org/" target="_blank">西安文理学院</a>
-                            ，现上海，就职于<a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_parent">上海龙帛信息技术有限公司</a>
+                            ，现上海，就职于<a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_blank">上海龙帛信息技术有限公司</a>
                             ，专注web前端偏前领域。
                             <p>邮箱：739291780@qq.com</p>
                             <p>关注我：<a href="">新浪微博</a> </p>
@@ -60,35 +59,20 @@
 
                     <div class="tit-good">
                         <strong>前端推荐</strong>
-                        <ul>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
+                        <ul id="recommend">
+
                         </ul>
                     </div>
                     <div class="tit-good">
                         <strong>生活搞笑</strong>
-                        <ul>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
+                        <ul id="interesting" class="fight-and-interesting">
+
                         </ul>
                     </div>
                     <div class="tit-good">
                         <strong>激励向上</strong>
-                        <ul>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
-                            <li><a href="">我心目中2017年4月和7月最佳新番</a><span>(123views)</span></li>
-                            <li><a href="">善良有什么用？</a><span>(1231views)</span></li>
+                        <ul id="fight" class="fight-and-interesting">
+
                         </ul>
                     </div>
                 </div>
@@ -102,5 +86,10 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<!--引入bootstrap.js类库文件-->
 	<script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="js/life.js"></script>
+    <!--推荐-->
+    <script src="./js/recommend.js"></script>
+    <!--搞笑和激励-->
+    <script src="./js/fightAndInteresting.js"></script>
 </body>
 </html>

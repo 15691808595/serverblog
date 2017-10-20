@@ -10,6 +10,7 @@ if(isset($_SESSION['username'])){
     $content = $_REQUEST['content'];
     $text = $_REQUEST['text'];
     $type=$_REQUEST['type'];
+    $short=$_REQUEST['short'];
     if(strlen($text) == 0 || strlen($title) == 0){
         echo "文章标题或内容不能为空,{$text}";
         exit;
@@ -51,7 +52,7 @@ $img = $type.".png";
 
 
     //将文章内容添加到数据库里
-    $sql = "insert into article2(title,url,content,createTime,user,`type`,img) values('$title','$url','$content',$createTime,'$user','$type','$img')";
+    $sql = "insert into article2(title,url,content,createTime,user,`type`,img,short) values('$title','$url','$content',$createTime,'$user','$type','$img','$short')";
 
     $result = mysql_query($sql);
     //如果文章发布成功,则相应用户的文章数量加1

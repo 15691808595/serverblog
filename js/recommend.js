@@ -16,7 +16,6 @@ function getRanArr(obj) {
 }
 
 function getRecommend() {
-    // $("#recommend").html("");
     $.ajax({
         type: "get",
         url: "./api/showRecommend.php",
