@@ -30,7 +30,9 @@ body{
     box-shadow:0 2px 5px 0 rgba(0,0,0,.24);
 }
 #my-collapse {
+    position: relative;
     background-color: #34495e;
+    z-index: 99999;
 }
 .my-brand{
     color:#fff!important;
