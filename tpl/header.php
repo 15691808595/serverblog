@@ -11,8 +11,8 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-responsive" id="my-collapse">
             <ul class="nav navbar-nav" style="margin-left: 30px">
-                <li class="dropdown"><a href="home.php">网站首页</a></li>
-                <li class="dropdown"><a href="index.php">前端技术</a></li>
+                <li class="dropdown"><a href="index.php">网站首页</a></li>
+                <li class="dropdown"><a href="blog.php">前端技术</a></li>
                 <li class="dropdown"><a href="life.php">生活与创作</a></li>
                 <li class="dropdown"><a href="contact.php">建议与反馈</a></li>
             </ul>

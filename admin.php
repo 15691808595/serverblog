@@ -66,10 +66,10 @@ include_once "./tpl/modal.php";
             </div>
             <div class="tab-pane fade" id="visitor">
                 <div class="visitor clearfix">
-                    <h4>总记录：<span>121</span></h4>
-                    <h4>月记录：<span>121</span></h4>
-                    <h4>昨日记录：<span>121</span></h4>
-                    <h4>今日记录：<span>121</span></h4>
+                    <h4>总记录：<span>您无权限...</span></h4>
+                    <h4>月记录：<span>您无权限...</span></h4>
+                    <h4>昨日记录：<span>您无权限...</span></h4>
+                    <h4>今日记录：<span>您无权限...</span></h4>
                 </div>
                 <table id="visit" class="table table-bordered table-hover table-striped">
                     <thead>
@@ -116,6 +116,7 @@ include_once "./tpl/modal.php";
         </div>
 
     </div>
+
 
 </div>
 

@@ -14,6 +14,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/life.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="shortcut icon" href="./img/favicon.ico">

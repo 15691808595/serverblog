@@ -65,6 +65,10 @@ li{
 }
 
 /*---------------------------------------------------------------------文章推荐*/
+#recommend{
+    height: 80px;
+    overflow: hidden;
+}
 .tit-good{
     width: 336px;
     margin-top: 20px;
