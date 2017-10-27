@@ -24,16 +24,15 @@ body{
 }
 /*导航条自定义样式*/
 .nav-main{
-    background-color:#34495e;
+    /*background-color:#34495e;*/
     height:51px;
     padding:0;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.24);
 }
-#my-collapse {
-    position: relative;
-    background-color: #34495e;
-    z-index: 99999;
+#my-collapse,.navbar-inverse {
+    background-color: #101010;
 }
+
 .my-brand{
     color:#fff!important;
 }
@@ -80,7 +79,7 @@ body{
     width: 100%;
     bottom: 0;
     padding: 18px 0;
-    background-color: #263238;
+    background-color: #101010;
     color: #fff;
 }
 @media (max-width: 768px) {

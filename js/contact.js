@@ -10,23 +10,28 @@ function getData(obj) {
     });
     return d;
 }
-
+var _bool=true;
 //表单验证
 function regValid(reg,name,txt) {
     var d = getData($('form').serializeArray());
     if(!reg.test(d[name])){
         $("#tips").addClass("error").text(txt);
+        return false;
     }else {
         $("#tips").removeClass("error").text("*请填写剩余信息...");
+        return true;
     }
 }
-$(function () {
+var _a=false;
+var _b=false;
+function nextValid() {
     var maxNum=400;//发送消息不能超过400字符
     $("[name=username]").on("keyup",function () {
-        regValid(/^[\u4e00-\u9fa5\w-]{2,10}$/,"username","*姓名只能包含中文、数字、字母和\"_\"、\"-\"");
+        _a=regValid(/^[\u4e00-\u9fa5\w-]{2,10}$/,"username","*姓名只能包含中文、数字、字母和\"_\"、\"-\"");
+        console.log('user:_a:'+_a)
     });
     $("[name=qq]").on("keyup",function () {
-        regValid(/^[1-9][0-9]{4,10}$/,"qq","*qq规则不符合要求");
+        _b=regValid(/^[1-9][0-9]{4,10}$/,"qq","*qq规则不符合要求");
     });
     $("[name=email]").on("keyup",function () {
         regValid(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,"email","*邮箱规则不符合要求");
@@ -40,6 +45,10 @@ $(function () {
             $(this).val($(this).val().substring(0,maxNum-1))
         }
     });
+    return _a&&_b;
+}
+$(function () {
+    nextValid();
     //阻止表单提交跳转页面
     $("#btn").click(function () {
         var d = getData($('form').serializeArray());
@@ -48,20 +57,23 @@ $(function () {
             $("#tips").addClass("error").text("*姓名，qq和消息不能为空");
             return false;
         }
-        $.ajax({
-            type: "post",
-            url: "./api/contact.php",
-            data: {
-                username: d.username,
-                email: d.email,
-                qq: d.qq,
-                phone:d.phone,
-                message:d.message,
-            },
-            success: function (data, status, xhr) {
-                alert(data)
-            }
-        });
+        if(nextValid()){
+            $.ajax({
+                type: "post",
+                url: "./api/contact.php",
+                data: {
+                    username: d.username,
+                    email: d.email,
+                    qq: d.qq,
+                    phone:d.phone,
+                    message:d.message,
+                },
+                success: function (data, status, xhr) {
+                    alert(data)
+                }
+            });
+
+        }
 
         return false;
     });

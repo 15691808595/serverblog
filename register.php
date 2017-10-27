@@ -111,6 +111,7 @@
 <script type="text/javascript" src="./js/jquery.js"></script>
 <!--引入bootstrap.js类库文件-->
 <script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/captcha.js"></script>
 <script src="./js/register.js"></script>
 </body>

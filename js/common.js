@@ -9,7 +9,7 @@ $(".article-type").mouseover(function () {
 });
 
 //导航logo转动
-$(".my-brand").mouseover(function () {
+$(".logoname").mouseover(function () {
     $(this).addClass("rotateIn")
 }).mouseout(function () {
     $(this).removeClass("rotateIn");
