@@ -12,6 +12,7 @@ if(isset($_SESSION['username'])){
     $visitor=$_REQUEST['visitor'];
     $like=$_REQUEST['like'];
     $user=$_REQUEST['user'];
+    $short=$_REQUEST['short'];
     $url=$_REQUEST['url'];
     $type=$_REQUEST['type'];
 //    echo $type;
@@ -28,9 +29,9 @@ if(isset($_SESSION['username'])){
 
     if($username=="刘伟波"){
         if($type=="0"){
-            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',url='$url'  where `id`='$id'";
+            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url'  where `id`='$id'";
         }else{
-            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',url='$url',`type`='$type',img='$img'  where `id`='$id'";
+            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url',`type`='$type',img='$img'  where `id`='$id'";
         }
 
     }else{

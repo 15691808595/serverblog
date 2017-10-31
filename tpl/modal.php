@@ -1,8 +1,8 @@
-<div id="myModal" class="modal fade bs-example-modal-sm">
+<div id="myModal" class="modal fade bs-example-modal-sm" style="margin-top: 150px">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header" style="padding:5px;border-top-left-radius: 5px;border-top-right-radius:5px;background-color: #1abc9c;color:#fff;">
-                <button type="button" class="close" data-dismiss="modal">X</button>
+            <div class="modal-header" style="padding:5px;border-top-left-radius: 5px;border-top-right-radius:5px;background-color: #101010;color:#fff;">
+                <button type="button" class="close" data-dismiss="modal" style="color: #fff">X</button>
                 <h6 class="modal-title" style="padding-left:10px;font-size: 17px;">提示信息</h6>
             </div>
             <div class="modal-body my-modal-body">

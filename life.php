@@ -8,7 +8,7 @@ session_start();
 	<!--确保IE浏览器始终以最新的引擎渲染页面-->
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<!--确保页面在移动端下保持页面窗口大小设备视口大小，初始页面缩放比例1-->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title>生活与创作 &raquo; 刘伟波-天天向上</title>
 	<!--引入bootstrap css样式文件-->
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
@@ -39,17 +39,17 @@ session_start();
 	<div class="container main-container animated bounceInRight">
 		<div class="container">
 			<div class="row">
-                <div id="life-list" class="col-sm-9">
+                <div id="life-list" class="col-sm-9 col-xs-12">
 
 
                 </div>
-                <div class="col-sm-3">
+                <div id="my-msg" class="col-sm-3 col-xs-12">
                     <div class="myself clearfix">
                         <div class="my-img">
                             <img src="img/user/header-my.jpg" width="80" alt="">
                         </div>
                         <div class="my-info">
-                            刘伟波 <sup><a href="detail.php?id=135">more</a></sup>，16年毕业于
+                            刘伟波 <sup><a href="detail.php?id=146">more</a></sup>，16年毕业于
                             <a href="http://www.xawl.org/" title="http://www.xawl.org/" target="_blank">西安文理学院</a>
                             ，现上海，就职于<a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_blank">上海龙帛信息技术有限公司</a>
                             ，专注web前端偏前领域。
@@ -58,24 +58,27 @@ session_start();
                         </div>
                     </div>
 
-                    <div class="tit-good">
-                        <strong>前端推荐</strong>
-                        <ul id="recommend">
+                    <div id="tit-good-box">
+                        <div class="tit-good">
+                            <strong>前端推荐</strong>
+                            <ul id="recommend">
 
-                        </ul>
-                    </div>
-                    <div class="tit-good">
-                        <strong>生活搞笑</strong>
-                        <ul id="interesting" class="fight-and-interesting">
+                            </ul>
+                        </div>
+                        <div class="tit-good">
+                            <strong>生活搞笑</strong>
+                            <ul id="interesting" class="fight-and-interesting">
 
-                        </ul>
-                    </div>
-                    <div class="tit-good">
-                        <strong>激励向上</strong>
-                        <ul id="fight" class="fight-and-interesting">
+                            </ul>
+                        </div>
+                        <div class="tit-good">
+                            <strong>激励向上</strong>
+                            <ul id="fight" class="fight-and-interesting">
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
 		</div>

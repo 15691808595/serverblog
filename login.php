@@ -5,7 +5,7 @@
 	<!--确保IE浏览器始终以最新的引擎渲染页面-->
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<!--确保页面在移动端下保持页面窗口大小设备视口大小，初始页面缩放比例1-->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title>登录</title>
 	<!--引入bootstrap css样式文件-->
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">

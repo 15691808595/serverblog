@@ -25,6 +25,7 @@ function getFIghtAndInterseting() {
             var interesting='';
             var ranArrFight=getRanArr(obj.fight);
             var ranArrInteresting=getRanArr(obj.interesting);
+            console.log(obj);
             $.each(obj.fight,function (i,ele) {
                 if(ranArrFight.indexOf(i)>=0){
                     fight+=`<li class="list-group-item"><a href="detail.php?id=${ele.id}"  title="${ele.title}">${ele.title}</a> <span>(${ele.visitor}Views)</span></li>`;

@@ -58,7 +58,7 @@ mysql_query($sql);
                 <div class="home ">
                     <div class="box">
                         <div class="row">
-                            <div class="col-md-8 col-sm-12">
+                            <div id="video-box" class="col-md-8 col-sm-12">
                                 <div class="row">
                                     <div id="media" class="col-md-7" >
                                         <video src="mp4/420style.mp4" controls></video>
@@ -79,7 +79,7 @@ mysql_query($sql);
                             <div class="col-md-4 col-sm-12">
                                 <div class="intro">
                                     <div class="line">
-                                        <h3>刘伟波</h3>
+                                        <h3>刘伟波<sup><a href="detail.php?id=146">more</a></sup></h3>
 
                                         <div class="rw-words">
                                             <span>励志成为Full Stack Developer</span>
@@ -100,7 +100,7 @@ mysql_query($sql);
                                             <li>
                                                 <ul class="line-inblock">
                                                     <li>就职</li>
-                                                    <li><a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_parent">上海龙帛信息技术有限公司</a></li>
+                                                    <li><a href="http://www.dragonsoftbravo.com/" title="http://www.dragonsoftbravo.com/" target="_blank">上海龙帛信息技术有限公司</a></li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -126,7 +126,7 @@ mysql_query($sql);
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt30">
+                        <div id="recommend-box" class="row mt30">
 
                             <div class="col-md-4 col-sm-12">
                                 <div class="my-intro">
@@ -169,6 +169,9 @@ mysql_query($sql);
         </div>
         <div class="col-md-2"></div>
     </div>
+</div>
+<div class="phone768">
+    使用电脑会看到更多内容哦！
 </div>
 <?php
     include_once  "./tpl/footer.php";

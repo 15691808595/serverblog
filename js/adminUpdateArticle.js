@@ -25,6 +25,7 @@ $("#submit").click(function () {
             user: d.user,
             visitor: d.visitor,
             like: d.like,
+            short: d.short,
             content:content,
             type:d.articleType
         },

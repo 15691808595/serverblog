@@ -40,7 +40,7 @@ body{
     color:#fff!important;
 }
 .main-container{
-    padding-top:80px;
+    padding:80px 15px 15px 15px;
 }
 .nav > li > a {
     padding-right:14px;
@@ -129,6 +129,11 @@ body{
 }
 
 /*文章发布页*/
+.login-tips{
+    padding-left: 0;
+    font-size: 12px;
+    color: red;
+}
 form:nth-child(1){
     margin-bottom:25px;
 }
@@ -138,5 +143,17 @@ form:nth-child(1){
     }
     .email-tips{
         font-size: 12px;
+    }
+}
+.phone768{
+    display: none;
+}
+/*手机端隐藏视频推荐*/
+@media (max-width:768px) {
+    #video-box,#recommend-box,#recommend,#tit-good-box,#my-msg{
+        display: none;
+    }
+    .phone768{
+        display: block;
     }
 }
