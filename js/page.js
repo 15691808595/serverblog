@@ -102,7 +102,7 @@ $(document).on("click","#lastPage",function () {
 
 //将body滚动条移缓慢移动顶端
 function moveTop() {
-    $("body").animate({
+    $("html,body").animate({
         scrollTop:0
     },500)
 }

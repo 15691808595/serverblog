@@ -3,7 +3,7 @@ include_once "dbConnect.php";
 
 date_default_timezone_set('Asia/Shanghai');//设置时区
 
-$sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`type`,`short` from article2 where `type`='interesting' or `type`='fight' order by createTime desc ";
+$sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`type`,`short` from article2 where `type`='interesting' or `type`='fight' order by createTime  ";
 
 
 $result = mysql_query($sql);
