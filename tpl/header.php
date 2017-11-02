@@ -23,17 +23,10 @@
                 if(isset($_SESSION['username'])){
                     //用户已登录，则取出用户名
                     $username = $_SESSION['username'];
-                    if($username=="刘伟波"){
-                        echo <<<tagName1
-                        <li class="right-nav"><a href="admin.php" >{$username}</a></li>
-                        <li class="right-nav"><a href="logout.php" >退出</a></li>
+                    echo <<<tagName1
+                    <li class="right-nav"><a href="admin.php" >{$username}</a></li>
+                    <li class="right-nav"><a href="logout.php" >退出</a></li>
 tagName1;
-                    }else{
-                        echo <<<tagName1
-                        <li class="right-nav"><a href="javascript:;">{$username}</a></li>
-                        <li class="right-nav"><a href="logout.php" >退出</a></li>
-tagName1;
-                    }
 
                 }else{
                     //未登录

@@ -1,4 +1,4 @@
-[id*=del] {
+[id*=del],.del_color {
     width: 80px;
     color: #337ab7;
     cursor: pointer;

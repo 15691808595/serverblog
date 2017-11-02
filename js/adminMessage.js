@@ -3,6 +3,10 @@
  */
 
 $(function () {
+    getAllMsg();
+});
+
+function getAllMsg() {
     $.ajax({
         url:"./api/adminGetMsg.php",
         type:"get",
@@ -16,6 +20,7 @@ $(function () {
                 <td class="text-center">${key}</td>
                 `;
                 }
+                thead+=`<td class="text-center">操作</td>`;
                 //添加标题
                 $("#msg thead tr").append(thead);
                 $.each(json,function (i,ele) {
@@ -29,12 +34,8 @@ $(function () {
                     <td >${ele.qq}</td>
                     <td>${ele.tel}</td>
                     <td>${ele.msg}</td>
-                    <td style="width: 180px">${ele.createTime}</td>`;
-
-
-
-
-
+                    <td style="width: 180px">${ele.createTime}</td>
+                    <td class="del_color" id=msg_del_${ele.id}>删除</td>`;
 
                     //添加内容
                     $("#msg tbody").append(tbody);
@@ -43,5 +44,27 @@ $(function () {
 
         }
     });
-});
+}
 
+// 点击删除文章
+$(function () {
+    $(document).on("click","[id*=msg_del_]",function () {
+        var id=$(this).attr("id").substring($(this).attr("id").lastIndexOf("_")+1);
+        $.ajax({
+            url:"./api/delArticle.php",
+            type:"get",
+            data:{id:id,type:'msg'},
+            success:function (data) {
+
+                $(".my-modal-body").html(data);
+                $("#myModal").modal("show");
+                setTimeout(function () {
+                    $("#myModal").modal("hide");
+                },1200);
+                $("thead tr").html("");
+                $("tbody").html("");
+                getAllMsg();
+            }
+        })
+    })
+});
