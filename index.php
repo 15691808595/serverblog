@@ -51,7 +51,7 @@ $sql="insert into visitor_ip(address,ip,createTime) values ('上海','127.7.7.7'
 mysql_query($sql);
 ?>
 <div class=" main-container">
-    <div>
+    <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="row">
