@@ -13,14 +13,20 @@ $("#submit").click(function () {
         },1200);
         return false;
     }
+    var referrer=document.referrer;
+    console.log(referrer.substring(referrer.lastIndexOf('/')+1));
     $.ajax({
         type:"post",
         url:"./api/checkLogin.php",
         data:{username:username,password:password,isRemember:isRemember,submit:'submit'},
         success:function (data, status, xhr) {
             if(data == 1 || data == 0){
-                //登录成功跳转到主页
-                location.href = "index.php";
+                //登录成功跳转之前浏览的页面
+                if(referrer.substring(referrer.lastIndexOf('/')+1)==='register.php'){
+                    location.href = 'index.php';
+                }else {
+                    location.href = referrer;
+                }
             }else{
                 $(".my-modal-body").html("用户名或密码错误");
                 $("#myModal").modal("show");

@@ -44,43 +44,34 @@
                     <div class="panel-body">
                         <form action="./api/register.php"  method="post" class="form-horizontal">
                             <div class="form-group">
-                                <label class="control-label col-xs-3">用户名</label>
+                                <label class="control-label col-xs-3">*用户名</label>
                                 <div class="col-xs-9">
-                                    <input type="text" name="username" class="form-control" placeholder="用户名4到32个字符">
+                                    <input type="text" name="username" class="form-control" placeholder="用户名4到32个字符 (必填)">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-xs-3">昵&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+                                <label class="control-label col-xs-3">*常用邮箱</label>
                                 <div class="col-xs-9">
-                                    <input type="text" name="nickName" class="form-control" placeholder="昵称2到32个字符">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-xs-3">常用邮箱</label>
-                                <div class="col-xs-9">
-                                    <input type="text" name="email" class="form-control" placeholder="输入常用邮箱，验证后才能登陆">
+                                    <input type="text" name="email" class="form-control" placeholder="输入常用邮箱，验证后才能登陆 (必填,不会被公开)">
                                     <p class="help-block">
                                 </div>
-                                <div class="col-md-10 col-md-offset-2 col-xs-12">
-                                    <p class="text-danger email-tips">【如果您未在收件箱收到验证邮件，请到垃圾箱查收。】</p>
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-xs-3">密码</label>
+                                <label class="control-label col-xs-3">*密码</label>
                                 <div class="col-xs-9">
-                                    <input type="password" name="pass" class="form-control" placeholder="密码至少8位">
+                                    <input type="password" name="pass" class="form-control" placeholder="密码至少8位 (必填)">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-xs-3">重复密码</label>
+                                <label class="control-label col-xs-3">*重复密码</label>
                                 <div class="col-xs-9">
-                                    <input type="password" name="repass" class="form-control" placeholder="重复密码，两次输入必须一致">
+                                    <input type="password" name="repass" class="form-control" placeholder="重复密码，两次输入必须一致 (必填)">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-xs-3">验证码</label>
+                                <label class="control-label col-xs-3">*验证码</label>
                                 <div class="col-md-3 col-xs-4">
-                                    <input type="text" name="captcha" id="inputCaptcha" class="form-control" placeholder="验证码">
+                                    <input type="text" name="captcha" id="inputCaptcha" class="form-control" placeholder="验证码 (必填)">
                                 </div>
                                 <div class="col-xs-1 no-pad" >
                                     <!--输入正确时的提示信息-->

@@ -4,9 +4,9 @@
 //ajax注册
 $("#submit").click(function () {
     var username = $("[name='username']").val();
-    var nickName = $("[name='nickName']").val();
     var pass = $("[name='pass']").val();
     var repass = $("[name='repass']").val();
+    var Captcha = $("#inputCaptcha").val();
     if(pass !== repass ){
         $(".my-modal-body").html("输入密码不一致");
         $("#myModal").modal("show");
@@ -19,16 +19,24 @@ $("#submit").click(function () {
 
     //验证邮箱是合法
     var emailReg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
-    if(!emailReg.test(email)){
-        $(".my-modal-body").html("输入邮箱不合法");
+    if(username==='' || pass === '' || repass ==='' || Captcha===''){
+        $(".my-modal-body").html("必填项不能为空！");
         $("#myModal").modal("show");
         setTimeout(function () {
             $("#myModal").modal("hide");
         },1200);
         return false;
+        if(!emailReg.test(email)){
+            $(".my-modal-body").html("输入邮箱不合法");
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+            return false;
+        }
     }
 
-    var data = {username:username,nickName:nickName,pass:pass,email:email}
+    var data = {username:username,pass:pass,email:email};
     $.ajax({
         type:'post',
         url:"./api/register.php",
@@ -57,7 +65,6 @@ $("#submit").click(function () {
             },1200);
         },
         beforeSend:function () {
-            console.log(data);
         }
     });
 

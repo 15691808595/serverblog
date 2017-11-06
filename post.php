@@ -37,9 +37,17 @@ session_start();
                 include_once "./tpl/aside.php";
             ?>
             <div class="col-sm-9 animated bounceInRight">
+                <?php
+                    if(!isset($_SESSION['username'])){
+                        echo <<<tagname
+                    
                 <div class="login-tips col-sm-10 " >
                     *登录后可发布文章
                 </div>
+tagname;
+
+                    }
+                ?>
                 <form action="./api/postArticle.php" method="post" class="form-horizontal">
                     <!--文章标题-->
                     <div class="form-group">

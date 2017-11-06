@@ -12,7 +12,6 @@ $("#captcha").click(function () {
 });
 //方法：用ajax验证
 $("#inputCaptcha").on("input",function () {
-    //console.log($(this).val());
     var value = $(this).val();
     //发送ajax验证请求
     $.ajax({
