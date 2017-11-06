@@ -8,7 +8,7 @@ $.ajax({
         $.each(result.list,function (i,ele) {
             html+=`
                     <div class="life-box">
-                        <h2 class="title"><a href="">${ele.title}</a></h2>
+                        <h2 class="title"><a href="detail.php?id=${ele.id}">${ele.title}</a></h2>
                         <div class="time">${ele.createTime} by ${ele.user} 阅读 ${ele.visitor} 次, 点赞 ${ele.like} 次</div>
                         <div class="short">${ele.short}</div>
                         <div class="read-all"><a href="detail.php?id=${ele.id}">阅读全文...</a></div>

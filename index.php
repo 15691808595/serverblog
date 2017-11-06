@@ -121,6 +121,12 @@ mysql_query($sql);
                                                     <li class="address"><a href="https://15691808595.github.io/" title="https://15691808595.github.io/" target="_blank">点击进入</a></li>
                                                 </ul>
                                             </li>
+                                            <li>
+                                                <ul class="line-inblock">
+                                                    <li>github小游戏</li>
+                                                    <li class="address"><a href="https://15691808595.github.io/project/jq_pull_box.html" title="https://15691808595.github.io/project/jq_pull_box.html" target="_blank">点击进入</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
