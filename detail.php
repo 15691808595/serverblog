@@ -77,7 +77,7 @@ session_start();
                 include_once "./tpl/aside.php";
             ?>
             <!--文章内容-->
-            <div style="margin-bottom: 20px" class="col-sm-9 animated bounceInRight">
+            <div class="detail-p col-sm-9 animated bounceInRight">
                 <div class="post-list-container">
                     <div class="row">
                         <div class="col-sm-12 list-container">

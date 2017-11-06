@@ -115,7 +115,10 @@ body{
 .article-info>ul>li{
     margin:0 15px;
 }
-
+.detail-p p{
+    text-indent: 2em;
+    margin-bottom: 20px
+}
 /*点赞图标样式*/
 .zan{
     color:#34495e;
@@ -126,6 +129,13 @@ body{
     line-height:28px;
     font-size:20px;
     padding-right:10px;
+}
+.a-img{
+    margin: 10px;
+    text-align: center;
+}
+.a-img img{
+    min-width:200px;
 }
 
 /*文章发布页*/
