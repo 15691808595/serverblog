@@ -29,6 +29,7 @@ session_start();
     <script src="./js/html5shiv.js"></script>
     <script src="./js/respond.js"></script>
     <![endif]-->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 
 </head>
 
@@ -44,11 +45,6 @@ $sql = "update visitor_counter set `all`=`all`+1 where id=1";
 
 mysql_query($sql);
 
-
-$createTime=time();
-$sql="insert into visitor_ip(address,ip,createTime) values ('上海','127.7.7.7','$createTime')";
-
-mysql_query($sql);
 ?>
 <div class=" main-container">
     <div class="row">
@@ -196,5 +192,6 @@ mysql_query($sql);
 <script src="./js/video.js"></script>
 <!--搞笑和激励-->
 <script src="./js/fightAndInteresting.js"></script>
+<script src="./js/saveIp.js"></script>
 </body>
 </html>
