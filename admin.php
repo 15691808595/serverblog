@@ -50,6 +50,11 @@ include_once "./tpl/modal.php";
                     <tbody class="text-center">
 
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
             <div class="tab-pane fade" id="profile">
@@ -122,11 +127,12 @@ include_once "./tpl/modal.php";
 
 <script src="js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/admin.js"></script>
+<!--<script src="js/admin.js"></script>-->
 <script src="js/adminMessage.js"></script>
 <script src="js/adminVisitor.js"></script>
 <script src="js/adminAllVisitor.js"></script>
 <script src="js/postVideo.js"></script>
 <script src="js/adminVideoShow.js"></script>
+<script src="js/lazyArticleTitle.js"></script>
 </body>
 </html>

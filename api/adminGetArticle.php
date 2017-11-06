@@ -5,7 +5,10 @@ include_once "dbConnect.php";
 if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     if($username=='刘伟波'){
-        $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`recommend` from article2 order by createTime desc";
+        $num = $_REQUEST['num'];
+        $everyNum = $_REQUEST['everyNum'];
+        $nums = $num * $everyNum;
+        $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`recommend` from article2 order by createTime desc limit $nums";
 
         $result = mysql_query($sql);
 

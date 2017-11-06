@@ -224,5 +224,6 @@ tagName4;
 <script src="./js/detailSetSeo.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
+<script src="./js/imageLazyLoad.js"></script>
 </body>
 </html>
