@@ -33,6 +33,7 @@ session_start();
 
 <body>
 <?php
+    include_once "./tpl/modal.php";
     include_once "./tpl/header.php";
 
 ?>

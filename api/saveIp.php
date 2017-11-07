@@ -7,6 +7,7 @@
  */
 include_once "dbConnect.php";
 $ip=$_REQUEST['ip'];
+$real_ip=$_REQUEST['real_ip'];
 $address=$_REQUEST['address'];
 
 $allIp="select `ip` from visitor_ip";
@@ -23,7 +24,7 @@ foreach ($arrAllIp as $val){
 }
 
 $createTime=time();
-$sql="insert into visitor_ip(address,ip,createTime) values ('$address','$ip','$createTime')";
+$sql="insert into visitor_ip(address,ip,real_ip,createTime) values ('$address','$ip','$real_ip','$createTime')";
 
 $result=mysql_query($sql);
 if($result){
