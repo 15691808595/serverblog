@@ -22,6 +22,8 @@ if(isset($_SESSION['username'])) {
             $result = mysql_query($sql);
             echo "id为".$id."的视频已经修改成功";
         }
+    }else{
+        echo "只有博客的主人刘伟波才可以删除或修改哦";
     }
 
 

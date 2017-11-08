@@ -26,6 +26,7 @@ $(function () {
                     <td>${ele.id}</td>
                     <td style="width: 100px">${ele.address}</a></td>
                     <td>${ele.ip}</td>
+                    <td>${ele.real_ip}</td>
                     <td style="width: 180px">${ele.createTime}</td>`;
 
 

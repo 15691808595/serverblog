@@ -206,6 +206,48 @@ tagName4;
 
                 ?>
 
+                <div class="comment-warp">
+                    <p>发表评论</p>
+                    <form id="comment-form" action="#" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <input type="text" name="user" class="form-control">
+                            </div>
+                            <div class="col-sm-5"><span>名称(必填)</span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                            <div class="col-sm-5"> <span>邮件地址(不会被公开) (必须)</span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <input type="text" name="website" class="form-control">
+                            </div>
+                            <div class="col-sm-5"> <span>网站</span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8">
+                                <textarea class="form-control" name="txt" id=""  rows="5" placeholder="(必填)"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <button id="comment-btn" class="btn btn-primary">提交评论</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="" id="comment-tips"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="comment-result">
+                    <ul id="showComment">
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -225,5 +267,7 @@ tagName4;
 <!--推荐-->
 <script src="./js/recommend.js"></script>
 <script src="./js/imageLazyLoad.js"></script>
+<!--评论-->
+<script src="./js/comment.js"></script>
 </body>
 </html>

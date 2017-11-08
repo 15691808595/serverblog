@@ -7,16 +7,21 @@ if(isset($_SESSION['username'])) {
 
     //已登录
     $username = $_SESSION['username'];
-    $id = $_REQUEST['id'];  //页码
-    $bool = $_REQUEST['bool']; // 推荐判断
+    if($username=='刘伟波'){
+        $id = $_REQUEST['id'];  //页码
+        $bool = $_REQUEST['bool']; // 推荐判断
 
-    if($bool){
-        $sql = "update article2 set recommend=1 where id=$id";
+        if($bool){
+            $sql = "update article2 set recommend=1 where id=$id";
+        }else{
+            $sql = "update article2 set recommend=0 where id=$id";
+        }
+        mysql_query($sql);
+        echo "1";
     }else{
-        $sql = "update article2 set recommend=0 where id=$id";
+        echo "0";
     }
-    mysql_query($sql);
-    echo "1";
+
 }else{
     echo "0";
 }

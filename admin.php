@@ -36,6 +36,7 @@ include_once "./tpl/modal.php";
             <li><a href="#profile"   data-toggle="tab">留言管理</a></li>
             <li><a href="#visitor"   data-toggle="tab">浏览记录</a></li>
             <li><a href="#video"   data-toggle="tab">视频添加</a></li>
+            <li><a href="#commentAdmin"   data-toggle="tab">评论管理</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -118,6 +119,20 @@ include_once "./tpl/modal.php";
                 </table>
 
             </div>
+            <div class="tab-pane fade " id="commentAdmin">
+
+                <table id="showComment" class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    </tbody>
+                </table>
+
+            </div>
         </div>
 
     </div>
@@ -134,5 +149,6 @@ include_once "./tpl/modal.php";
 <script src="js/postVideo.js"></script>
 <script src="js/adminVideoShow.js"></script>
 <script src="js/lazyArticleTitle.js"></script>
+<script src="js/adminComment.js"></script>
 </body>
 </html>

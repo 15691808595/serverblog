@@ -2,7 +2,7 @@
  * Created by Qing on 2017/6/7.
  */
 var num = 1;  //保存当前的页码，默认是1
-var total = 0; //保存总的页数
+var total = 0; //保存总的文章
 var pageNum=0; //获取每一页的分页数
 
 //默认加载第一页数据
@@ -20,7 +20,7 @@ function getPage(num) {
         success:function (data, status, xhr) {
             var result = JSON.parse(data);
             //将结果集中的总页数赋值给total全局变量
-            total = result.total;
+            total = result.allArticle;
             pageNum = result.pageNum;
             //添加之前现将文章列表容器里的内容清空
             $(".list-container").html("");
@@ -28,7 +28,7 @@ function getPage(num) {
             $("#tpl").tmpl(result.list).prependTo(".list-container");
             $.each($(".post-item-container>h4>a"),function (index,ele) {
                 if(wd==ele.innerHTML){
-                    console.log(111);
+
                 }
             })
         },
@@ -40,8 +40,8 @@ function getPage(num) {
 //分页
 $("#page").paging({
     pageNo:num,
-    totalPage: total,
-    totalSize: total*pageNum,
+    totalPage: pageNum,
+    totalSize: total,
     callback: function(_num) {
         // alert(num)
         num=_num;

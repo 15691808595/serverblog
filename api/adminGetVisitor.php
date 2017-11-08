@@ -3,7 +3,7 @@ session_start();
 include_once "dbConnect.php";
 
 if(isset($_SESSION['username'])){
-    $sql = "select id,`address`,`ip`,`createTime` from visitor_ip order by createTime desc";
+    $sql = "select id,`address`,`ip`,`real_ip`,`createTime` from visitor_ip order by createTime desc";
 
     $result = mysql_query($sql);
 

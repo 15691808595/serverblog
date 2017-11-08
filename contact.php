@@ -33,11 +33,12 @@ session_start();
 
 <body>
 <?php
+    include_once "./tpl/modal.php";
     include_once "./tpl/header.php";
 
 ?>
 
-<div class="container main-container">
+<div class="container main-container contact-container">
     <div class="contact">
         <h1>联系我</h1>
         <form method="post" action="#" id='form'>

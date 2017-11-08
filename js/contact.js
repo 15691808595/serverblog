@@ -28,7 +28,7 @@ function nextValid() {
     var maxNum=400;//发送消息不能超过400字符
     $("[name=username]").on("keyup",function () {
         _a=regValid(/^[\u4e00-\u9fa5\w-]{2,10}$/,"username","*姓名只能包含中文、数字、字母和\"_\"、\"-\"");
-        console.log('user:_a:'+_a)
+
     });
     $("[name=qq]").on("keyup",function () {
         _b=regValid(/^[1-9][0-9]{4,10}$/,"qq","*qq规则不符合要求");
@@ -69,7 +69,11 @@ $(function () {
                     message:d.message,
                 },
                 success: function (data, status, xhr) {
-                    alert(data)
+                    $(".my-modal-body").html(data);
+                    $("#myModal").modal("show");
+                    setTimeout(function () {
+                        $("#myModal").modal("hide");
+                    },1200);
                 }
             });
 

@@ -41,9 +41,9 @@ session_start();
 			<div class="row">
                 <div id="life-list" class="col-sm-9 col-xs-12">
 
-
                 </div>
                 <div id="my-msg" class="col-sm-3 col-xs-12">
+<!--                    个人介绍-->
                     <div class="myself clearfix">
                         <div class="my-img">
                             <img src="img/user/header-my.jpg" width="80" alt="">
@@ -58,6 +58,13 @@ session_start();
                         </div>
                     </div>
 
+                    <div class="sidebar-time">
+                        <strong>文章存档</strong>
+                        <ul id="timeArticle" class="clearfix">
+
+                        </ul>
+                    </div>
+<!--                    推荐内容-->
                     <div id="tit-good-box">
                         <div class="tit-good">
                             <strong>前端推荐</strong>
@@ -95,5 +102,7 @@ session_start();
     <script src="./js/recommend.js"></script>
     <!--搞笑和激励-->
     <script src="./js/fightAndInteresting.js"></script>
+<!--    文章归档-->
+    <script src="./js/articleTime.js"></script>
 </body>
 </html>

@@ -18,7 +18,6 @@ $(function () {
                     <h4>今日记录：<span>${json[0].today}</span></h4>
                 `;
                 $(".visitor").html(html)
-                console.log(json);
             }
 
         }
