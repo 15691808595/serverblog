@@ -64,13 +64,12 @@ $(function () {
             resolve(ip);
         })
     }).then((real_ip)=>{
-        console.log(real_ip);
         $.ajax({
             type:'post',
             url:"./api/saveIp.php",
             data:{ip,address:returnCitySN['cname'],real_ip},
             success:function (data,status,xhr) {
-                console.log(data)
+
             }
         });
     })

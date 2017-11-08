@@ -38,7 +38,7 @@ session_start();
 
 ?>
 
-<div class="container main-container">
+<div class="container main-container contact-container">
     <div class="contact">
         <h1>联系我</h1>
         <form method="post" action="#" id='form'>

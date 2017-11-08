@@ -37,7 +37,8 @@ $result = mysql_query($sql);
 
 $resArr = array(
     "total"=>0,
-    "list"=>array()
+    "list"=>array(),
+    "allArticle"=>$row['total']
 );
 
 //遍历结果集

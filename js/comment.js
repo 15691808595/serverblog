@@ -14,6 +14,31 @@ $(function () {
         });
         return d;
     }
+
+    $("[name=user]").on("keyup",function () {
+        var d = getData($('#comment-form').serializeArray());
+        if(d.user.length>14){
+            $(this).val($(this).val().substring(0,14))
+        }
+    });
+    $("[name=website]").on("keyup",function () {
+        var d = getData($('#comment-form').serializeArray());
+        if(d.website.length>49){
+            $(this).val($(this).val().substring(0,49))
+        }
+    });
+    $("[name=email]").on("keyup",function () {
+        var d = getData($('#comment-form').serializeArray());
+        if(d.email.length>49){
+            $(this).val($(this).val().substring(0,49))
+        }
+    });
+    $("[name=txt]").on("keyup",function () {
+        var d = getData($('#comment-form').serializeArray());
+        if(d.txt.length>399){
+            $(this).val($(this).val().substring(0,399))
+        }
+    });
     $("#comment-btn").click(function () {
         var d = getData($('#comment-form').serializeArray());
 

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-10">
             <div class="input-group my-input-group">
-                <input type="text" name="wd" class="form-control" placeholder="搜索">
+                <input type="text" name="wd" class="form-control" placeholder="翻页太辛苦，试试直接搜索">
                 <span class="input-group-addon my-addon search">
 												<i class="glyphicon glyphicon-search"></i>
 												搜索

@@ -40,7 +40,10 @@ body{
     color:#fff!important;
 }
 .main-container{
-    padding:80px 15px 15px 15px;
+    padding:74px 15px 15px 15px;
+}
+.main-container.contact-container{
+    padding-top: 20px;
 }
 .nav > li > a {
     padding-right:14px;
@@ -142,7 +145,7 @@ ul{
     position: relative;
     width: 80%;
     margin-top: 20px;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #ccc;
     list-style: none;
     color: #333;
@@ -175,10 +178,11 @@ ul{
 }
 .comment-result li p{
     color: #333;
-    line-height: 35px;
+    line-height: 21px;
     font-weight: normal;
     font-size: 14px;
-    margin: 0;
+    margin-top: 3px;
+    margin-bottom: 0;
     text-indent: 0;
 }
 .comment-result .comment-author{
@@ -229,6 +233,9 @@ form:nth-child(1){
     }
     .email-tips{
         font-size: 12px;
+    }
+    .hide-github{
+        display: none;
     }
 }
 .phone768{

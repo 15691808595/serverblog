@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta class="meta-ctrl-pc" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="renderer" content="webkit" />
     <meta http-equiv="description" content="刘伟波-天天向上" />
     <meta name="Keywords" content="刘伟波, 个人博客, 个人网站, web前端" />
@@ -75,7 +75,7 @@ mysql_query($sql);
                             <div class="col-md-4 col-sm-12">
                                 <div class="intro">
                                     <div class="line">
-                                        <h3>刘伟波<sup><a href="detail.php?id=146">more</a></sup></h3>
+                                        <h3 class="more-info"><a href="detail.php?id=146"><span>刘伟波</span> <sup>more</sup></a></h3>
 
                                         <div class="rw-words">
                                             <span>励志成为Full Stack Developer</span>
@@ -111,13 +111,13 @@ mysql_query($sql);
                                                     <li><a href="http://www.xawl.org/" title="http://www.xawl.org/" target="_blank">西安文理学院</a></li>
                                                 </ul>
                                             </li>
-                                            <li>
+                                            <li class="hide-github">
                                                 <ul class="line-inblock">
                                                     <li>github</li>
                                                     <li class="address"><a href="https://15691808595.github.io/" title="https://15691808595.github.io/" target="_blank">点击进入</a></li>
                                                 </ul>
                                             </li>
-                                            <li>
+                                            <li class="hide-github">
                                                 <ul class="line-inblock">
                                                     <li>github小游戏</li>
                                                     <li class="address"><a href="https://15691808595.github.io/project/jq_pull_box.html" title="https://15691808595.github.io/project/jq_pull_box.html" target="_blank">点击进入</a></li>
@@ -174,6 +174,9 @@ mysql_query($sql);
 </div>
 <div class="phone768">
     使用电脑会看到更多内容哦！
+</div>
+<div class="tab-pc text-center">
+    <button class="btn btn-danger btn-sm">电脑端</button>
 </div>
 <?php
     include_once  "./tpl/footer.php";

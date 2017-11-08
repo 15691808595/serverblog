@@ -58,7 +58,23 @@
     text-align: center;
     color: orangered;
 }
-sup{
-    margin-left: 5px;
+.more-info a{
+    text-decoration: none;
+}
+.more-info a>span{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+.more-info sup{
+    top:-13px;
+}
+.tab-pc{
+    margin-top: 20px;
+}
+@media (min-width:768px) {
+    .tab-pc{
+        display: none;
+    }
 }
 
