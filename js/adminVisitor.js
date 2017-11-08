@@ -8,7 +8,6 @@ $(function () {
         type:"get",
         success:function (data, xhr) {
             if(data!=="0"){
-                console.log(data);
                 var arr=JSON.parse(data);
                 var json=arr.list;
                 var thead='';
