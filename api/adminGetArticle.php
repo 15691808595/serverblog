@@ -4,7 +4,7 @@ include_once "dbConnect.php";
 
 if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
-    if($username=='刘伟波'){
+//    if($username=='刘伟波'){
         $num = $_REQUEST['num'];
         $everyNum = $_REQUEST['everyNum'];
         $nums = $num * $everyNum;
@@ -27,9 +27,9 @@ if(isset($_SESSION['username'])){
 
 
         echo json_encode($resArr);  //返回结果集json字符串
-    }else{
-        echo 0;
-    }
+//    }else{
+//        echo 0;
+//    }
 }else{
     echo 0;
 }
