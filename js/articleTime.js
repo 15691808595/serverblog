@@ -42,7 +42,7 @@ $(function () {
             type:"get",
             data:{t1,t2},
             success:function (data) {
-                console.log(JSON.parse(data));
+                // console.log(JSON.parse(data));
 
                 var html=`<h3 class="text-center page-header">${_y} 存档</h3>`;
                 $.each(JSON.parse(data).list,function (i,ele) {
