@@ -26,6 +26,17 @@
                 padding-top:80px;
             }
         }
+        ul,li{list-style:none;}
+        /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
+        /*.parentCls{width:200px;}*/
+        .parentCls ul{
+            left: 14px;
+        }
+        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;}
+        .auto-tip li em{font-style: normal}
+        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
+        .red{color:#9e9898;}
+        .hidden {display:none;}
     </style>
 </head>
 <body>
@@ -51,8 +62,8 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-xs-3">*常用邮箱</label>
-                                <div class="col-xs-9">
-                                    <input type="text" name="email" class="form-control" placeholder="输入常用邮箱，验证后才能登陆 (必填,不会被公开)">
+                                <div class="col-xs-9 parentCls">
+                                    <input type="text" name="email" class="form-control inputElem" placeholder="输入常用邮箱，验证后才能登陆 (必填,不会被公开)">
                                     <p class="help-block">
                                 </div>
                             </div>
@@ -79,7 +90,7 @@
                                     <!--输入错误时的提示信息-->
                                     <span class="error" style="color:red;font-size:20px;display: none;">×</span>
                                 </div>
-                                <div class="col-xs-2 no-pad">
+                                <div class="col-xs-2 no-pad" style="cursor: pointer">
                                     <img id="captcha" src="./api/captcha.php" alt="验证码">
                                 </div>
                             </div>
@@ -102,6 +113,7 @@
 <script type="text/javascript" src="./js/jquery.js"></script>
 <!--引入bootstrap.js类库文件-->
 <script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/emailAutoComplete.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/captcha.js"></script>
 <script src="./js/register.js"></script>

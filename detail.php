@@ -33,6 +33,17 @@ session_start();
         .lead{
             overflow-x: hidden;
         }
+        ul,li{list-style:none;}
+        /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
+        /*.parentCls{width:200px;}*/
+        .parentCls ul{
+            left: 14px;
+        }
+        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;}
+        .auto-tip li em{font-style: normal}
+        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
+        .red{color:#9e9898;}
+        .hidden {display:none;}
     </style>
 </head>
 
@@ -216,8 +227,8 @@ tagName4;
                             <div class="col-sm-5"><span>名称(必填)</span></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-5">
-                                <input type="text" name="email" class="form-control">
+                            <div class="col-sm-5 parentCls">
+                                <input type="text" name="email" class="form-control inputElem">
                             </div>
                             <div class="col-sm-5"> <span>邮件地址(不会被公开) (必须)</span></div>
                         </div>
@@ -259,6 +270,7 @@ tagName4;
 <script type="text/javascript" src="./js/jquery.js"></script>
 <!--引入bootstrap.js类库文件-->
 <script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/emailAutoComplete.js"></script>
 <script src="./js/zan.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>

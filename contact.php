@@ -23,6 +23,20 @@ session_start();
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
+    <style>
+        ul,li{list-style:none;}
+        /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
+        /*.parentCls{width:200px;}*/
+        .parentCls ul{
+            left: 14px;
+            background-color: #f1f1f1 !important;
+        }
+        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;text-align: left}
+        .auto-tip li em{font-style: normal;color: #555}
+        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
+        .red{color:#9e9898;}
+        .hidden {display:none;}
+    </style>
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>
     <script src="./js/html5shiv.js"></script>
@@ -44,16 +58,21 @@ session_start();
         <form method="post" action="#" id='form'>
             <div id="tips" >*请填写以下信息...</div>
             <div class="form-group">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="username" placeholder="名字(必填)" title="名字(必填)">
-                    <input type="text" class="form-control" name="email" placeholder="邮箱" title="邮箱"
-                           >
+                <div class="col-md-6 " >
+                                        <input type="text" class="form-control" name="username" placeholder="名字(必填)" title="名字(必填)">
+<!--                    <input type="text" class="form-control inputElem" name="email" placeholder="邮箱" title="邮箱">-->
                 </div>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="qq" placeholder="QQ/微信(必填)" title="QQ/微信(必填)"
-                            >
+                    >
+                </div>
+                <div class="col-md-6 parentCls" >
+                    <!--                    <input type="text" class="form-control" name="username" placeholder="名字(必填)" title="名字(必填)">-->
+                    <input type="text" class="form-control inputElem" name="email" placeholder="邮箱" title="邮箱">
+                </div>
+                <div class="col-md-6">
                     <input type="text" class="form-control" name="phone" placeholder="手机" title="手机"
-                            >
+                    >
                 </div>
                 <div class="clear"></div>
                 <div class="col-md-12">
@@ -88,6 +107,7 @@ session_start();
 <script type="text/javascript" src="./js/jquery.js"></script>
 <!--引入bootstrap.js类库文件-->
 <script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/emailAutoComplete.js"></script>
 <script src="./js/zan.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
