@@ -26,12 +26,14 @@ if(isset($_SESSION['username'])){
         $img = $type.".png";
     }
 
+    date_default_timezone_set('Asia/Shanghai');//设置时区
+    $update_time=time();
 
     if($username=="刘伟波"){
         if($type=="0"){
-            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url'  where `id`='$id'";
+            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url',modifyCount=modifyCount+1,lastModify='$update_time'  where `id`='$id'";
         }else{
-            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url',`type`='$type',img='$img'  where `id`='$id'";
+            $sql = "update `article2` set visitor='$visitor',title='$title',`like`='$like',`user`='$user',content='$content',`short`='$short',url='$url',`type`='$type',img='$img',modifyCount=modifyCount+1,lastModify='$update_time'  where `id`='$id'";
         }
 
     }else{

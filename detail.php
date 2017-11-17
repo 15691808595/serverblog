@@ -69,14 +69,19 @@ session_start();
     $row = mysql_fetch_assoc($result);
 
 
-
-
     //对文章内容进行一次urldecode()解密
 
     $row['content'] = urldecode($row['content']);
     //将时间戳转化成时间日期格式
     date_default_timezone_set('prc');
     $row['createTime'] = date("Y-m-d H:i",$row['createTime']);
+
+    if(!$row['lastModify']){
+        $row['lastModify'] = $row['createTime'];
+    }else{
+        $row['lastModify'] = date("Y-m-d H:i",$row['lastModify']);
+    }
+
     //$row -->id , user ,title,content,url,visitor,like,createTime
 
 ?>
@@ -101,6 +106,8 @@ session_start();
                                         <li class="pull-left">发布时间：{$row['createTime']}</li>
                                         <li class="pull-left">作者：{$row['user']}</li>
                                         <li class="pull-left">浏览次数：{$row['visitor']}</li>
+                                        <li class="pull-left">最后修改：{$row['lastModify']}</li>
+                                        <li class="pull-left">修改次数：{$row['modifyCount']}</li>
                                     </ul>
                                 </div>
                                 <!--文章内容-->
