@@ -196,5 +196,7 @@ mysql_query($sql);
 <!--搞笑和激励-->
 <script src="./js/fightAndInteresting.js"></script>
 <script src="./js/saveIp.js"></script>
+<!--每日浏览-->
+<script src="./js/view/addView.js"></script>
 </body>
 </html>

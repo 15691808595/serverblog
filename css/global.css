@@ -140,6 +140,31 @@ ul{
 .comment-result ul{
     animation-name: flash;
 }
+.comment-result ul li:nth-child(even){
+    background-color: #f8f8f8;
+}
+.comment-result ul li{
+    position: relative;
+    padding-right: 38px;
+}
+.comment-result ul li:after{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    padding: 2px;
+    background: url("../img/c_1.jpg") no-repeat center;
+    background-size: 30px;
+}
+.comment-result ul li:nth-child(even):after{
+    background: url("../img/c_2.jpg") no-repeat center;
+    background-size: 30px;
+}
+
 .comment-result li{
     counter-increment: flashIndex;
     position: relative;

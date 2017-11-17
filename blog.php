@@ -108,6 +108,8 @@
 <script src="./js/search.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
+<!--每日浏览-->
+<script src="./js/view/view.js"></script>
 
 </body>
 </html>

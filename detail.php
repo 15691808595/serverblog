@@ -281,5 +281,7 @@ tagName4;
 <script src="./js/imageLazyLoad.js"></script>
 <!--评论-->
 <script src="./js/comment.js"></script>
+<!--每日浏览-->
+<script src="./js/view/view.js"></script>
 </body>
 </html>

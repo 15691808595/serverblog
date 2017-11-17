@@ -30,7 +30,6 @@ $img = $type.".png";
     $url = $_REQUEST['url'];
 
 
-    //文章发布时间是来自于客户端还是来自于服务器时间？  哪个比较靠谱？
 
     $createTime = time();
 
