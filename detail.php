@@ -1,54 +1,7 @@
-﻿<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="description" content="刘伟波-天天向上" />
-    <meta name="Keywords" content="刘伟波, 个人博客, 个人网站, web前端" />
-    <meta name="Description" content="刘伟波的个人博客，刘伟波的技术作品，刘伟波的生活成长" />
-    <meta name="author" content="刘伟波,liuweibo" />
+﻿
 
-    <title>刘伟波的个人博客 &raquo; 刘伟波-天天向上</title>
-
-    <!--引入bootstrap css样式文件-->
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
-
-    <style>
-        .lead{
-            overflow-x: hidden;
-        }
-        ul,li{list-style:none;}
-        /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
-        /*.parentCls{width:200px;}*/
-        .parentCls ul{
-            left: 14px;
-        }
-        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;}
-        .auto-tip li em{font-style: normal}
-        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
-        .red{color:#9e9898;}
-        .hidden {display:none;}
-    </style>
-</head>
-
-<body>
 <?php
+session_start();
     include_once "./tpl/modal.php";
     include_once "./tpl/header.php";
     include_once "./api/dbConnect.php";
@@ -85,6 +38,67 @@ session_start();
     //$row -->id , user ,title,content,url,visitor,like,createTime
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit" />
+
+    <?php
+                                echo <<<tagName2
+                               
+
+                                <meta http-equiv="description" content="{$row['title']}" />
+                                <meta name="Keywords" content="{$row['title']}" />
+                                <meta name="Description" content="{$row['title']}" />
+                                <meta name="author" content="刘伟波,liuweibo" />
+                            
+                                <title>{$row['title']} &raquo; 刘伟波-天天向上</title>
+tagName2
+                            ?>
+
+    <!-- <meta http-equiv="description" content="刘伟波-天天向上" />
+    <meta name="Keywords" content="刘伟波, 个人博客, 个人网站, web前端" />
+    <meta name="Description" content="刘伟波的个人博客，刘伟波的技术作品，刘伟波的生活成长" />
+    <meta name="author" content="刘伟波,liuweibo" />
+
+    <title>刘伟波的个人博客 &raquo; 刘伟波-天天向上</title> -->
+
+    <!--引入bootstrap css样式文件-->
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.js"></script>
+    <![endif]-->
+
+    <style>
+        .lead{
+            overflow-x: hidden;
+        }
+        ul,li{list-style:none;}
+        /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
+        /*.parentCls{width:200px;}*/
+        .parentCls ul{
+            left: 14px;
+        }
+        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;}
+        .auto-tip li em{font-style: normal}
+        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
+        .red{color:#9e9898;}
+        .hidden {display:none;}
+    </style>
+</head>
+
+<body>
 <div class="container main-container">
     <div class="container">
         <div class="row">
@@ -282,7 +296,6 @@ tagName4;
 <!--定时器-->
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/detailSetSeo.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
 <script src="./js/imageLazyLoad.js"></script>
