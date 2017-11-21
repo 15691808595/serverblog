@@ -13,7 +13,7 @@ session_start();
     <meta name="Description" content="刘伟波的个人博客，刘伟波的技术作品，刘伟波的生活成长" />
     <meta name="author" content="刘伟波,liuweibo" />
 
-    <title>刘伟波的个人介绍 &raquo; 刘伟波-天天向上</title>
+    <title>刘伟波的个人博客 &raquo; 刘伟波-天天向上</title>
 
     <!--引入bootstrap css样式文件-->
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
