@@ -1,5 +1,7 @@
 ﻿<?php
+header("Access-Control-Allow-Origin:*");
 include_once "dbConnect.php";
+
 //获取页码
 $num = $_REQUEST['num'];  //页码
 $pageNum = 11;  //每页所包含的记录条数

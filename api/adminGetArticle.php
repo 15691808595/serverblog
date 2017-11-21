@@ -8,7 +8,7 @@ if(isset($_SESSION['username'])){
         $num = $_REQUEST['num'];
         $everyNum = $_REQUEST['everyNum'];
         $nums = $num * $everyNum;
-        $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`recommend` from article2 order by createTime desc limit $nums";
+        $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`recommend` from article2 order by modifyCount desc limit $nums";
 
         $result = mysql_query($sql);
 
