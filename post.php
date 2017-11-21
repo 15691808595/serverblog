@@ -11,12 +11,12 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>文章发布</title>
     <!--引入bootstrap css样式文件-->
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="editor/css/wangEditor.min.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>
@@ -103,10 +103,9 @@ tagname;
 <?php
     include_once "./tpl/footer.php";
 ?>
-<!--引入jQuery(bootstap的js插件依赖于jquery)-->
-<script type="text/javascript" src="./js/jquery.js"></script>
-<!--引入bootstrap.js类库文件-->
-<script src="./bootstrap/js/bootstrap.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="./editor/js/wangEditor.min.js"></script>
 <!--在线编辑器初始化-->
 <script src="./js/editorInit.js"></script>
