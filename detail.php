@@ -2,8 +2,6 @@
 
 <?php
 session_start();
-    include_once "./tpl/modal.php";
-    include_once "./tpl/header.php";
     include_once "./api/dbConnect.php";
     //根据传入的id从数据库获取相应文章的信息
     $id = $_REQUEST['id'];
@@ -93,6 +91,11 @@ tagName2
 </head>
 
 <body>
+<?php
+
+include_once "./tpl/modal.php";
+include_once "./tpl/header.php";
+?>
 <div class="container main-container">
     <div class="container">
         <div class="row">
@@ -134,7 +137,7 @@ tagName1
                         if($row['url']){
                             echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank'>{$row['url']}</a></span></div>";
                         }
-                        echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
+                        echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='glyphicon glyphicon-thumbs-up zan animated'></i></div>";
                     ?>
 
                 </div>
