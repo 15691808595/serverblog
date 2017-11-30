@@ -11,7 +11,7 @@ $(".zan").click(function () {
         data:{id:id},
         success:function (data,status,xhr) {
             if(data == 0 ){
-                $(".my-modal-body").html("点赞成功");
+                $(".my-modal-body").html("谢谢点赞");
                 $('#myModal').modal('show');
                 setTimeout(function () {
                     $("#myModal").modal("hide");
@@ -26,7 +26,7 @@ $(".zan").click(function () {
                     $("#myModal").modal("hide");
                 },1200);
             }else{
-                $(".my-modal-body").html("您已赞过该文章");
+                $(".my-modal-body").html("谢谢，您已赞过该文章");
                 $('#myModal').modal('show');
                 setTimeout(function () {
                     $("#myModal").modal("hide");
