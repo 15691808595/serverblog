@@ -132,7 +132,7 @@ tagName1
                     <?php
                         //data-id 为元素添加自定义属性
                         if($row['url']){
-                            echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank'>{$row['url']}</a></span></div>";
+                            echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank' rel='nofollow'>{$row['url']}</a></span></div>";
                         }
                         echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
                     ?>
