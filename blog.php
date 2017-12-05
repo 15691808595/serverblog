@@ -18,7 +18,6 @@
     <title>刘伟波的个人博客 &raquo; 刘伟波-天天向上</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/paging.css">

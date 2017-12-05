@@ -20,7 +20,6 @@ session_start();
 
 
     <<link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/life.css">
 	<link rel="shortcut icon" href="./img/favicon.ico">
     <style>

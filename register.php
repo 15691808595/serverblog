@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
     <!--[if lt IE 9]>

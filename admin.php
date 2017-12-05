@@ -11,7 +11,6 @@ session_start();
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 <body>
