@@ -13,11 +13,6 @@ session_start();
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
-    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
 </head>
 <body>
 <?php
@@ -143,7 +138,7 @@ include_once "./tpl/modal.php";
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script src="js/admin.js"></script>-->
+<script src="js/common.js"></script>
 <script src="js/adminMessage.js"></script>
 <script src="js/adminVisitor.js"></script>
 <script src="js/adminAllVisitor.js"></script>

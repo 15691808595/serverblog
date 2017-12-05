@@ -96,11 +96,11 @@
 <script type="text/javascript" src="js/paging.js"></script>
 <script>
 </script>
+<!--->
+<script src="./js/common.js"></script>
 <script src="./js/page.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
-<!--->
-<script src="./js/common.js"></script>
 <!--搜索功能-->
 <script src="./js/search.js"></script>
 <!--推荐-->

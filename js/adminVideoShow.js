@@ -7,19 +7,13 @@ $(function () {
     // 点击删除视频
     $(document).on("click","[id*=delVideo_]",function () {
         var id=$(this).attr("id").substring($(this).attr("id").indexOf("_")+1);
-        $.ajax({
-            url:"./api/delVideo.php",
-            type:"get",
-            data:{id:id,type:"del"},
-            success:function (data) {
-
-                $(".my-modal-body").html(data);
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-                getVideoShow();
-            }
+        query("./api/delVideo.php",{id:id,type:"del"},'get',true,function (data) {
+            $(".my-modal-body").html(data);
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+            getVideoShow();
         })
     });
     // 点击修改视频
@@ -27,48 +21,38 @@ $(function () {
         var id=$(this).attr("id").substring($(this).attr("id").indexOf("_")+1);
         var name=$("#updateName_"+id).val();
         var url=$("#updateUrl_"+id).val();
-        $.ajax({
-            url:"./api/delVideo.php",
-            type:"get",
-            data:{id:id,type:"update",name:name,url:url},
-            success:function (data) {
-
-                $(".my-modal-body").html(data);
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-                getVideoShow();
-            }
+        query("./api/delVideo.php",{id:id,type:"update",name:name,url:url},'get',true,function (data) {
+            $(".my-modal-body").html(data);
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+            getVideoShow();
         })
     })
 });
 function getVideoShow() {
-    $.ajax({
-        url:"./api/adminGetVideo.php",
-        type:"get",
-        async:false,
-        success:function (data, xhr) {
-           if(data!=="0"){
-               var arr=JSON.parse(data);
-               var json=arr.list;
-               var thead='';
-               var tbody='';
-               for(var key in json[0]){
-                   thead+=`
+    query("./api/adminGetVideo.php",{},'get',true,function (data) {
+        if(data!=="0"){
+            var arr=JSON.parse(data);
+            var json=arr.list;
+            var thead='';
+            var tbody='';
+            for(var key in json[0]){
+                thead+=`
                 <td class="text-center">${key}</td>
                 `;
-               }
-               thead+=`
+            }
+            thead+=`
                     <td class="text-center">操作</td>
                     <td class="text-center">修改</td>
                     `;
-               //添加标题
-               $("#videoShow thead tr").html(thead);
+            //添加标题
+            $("#videoShow thead tr").html(thead);
 
-               $.each(json,function (i,ele) {
+            $.each(json,function (i,ele) {
 
-                   tbody+=`
+                tbody+=`
                 <tr >
                 <td>${ele.id}</td>
                 <td style="width: 500px"><input id="updateName_${ele.id}" class="form-control" type="text" value="${ele.name}" title="可修改视频链接和标题"></a></td>
@@ -77,11 +61,10 @@ function getVideoShow() {
                 <td id=delVideo_${ele.id} >删除</td>
                 <td id=delVideoTrue_${ele.id} >确定</td>
                 </tr>`;
-               });
+            });
 
-               //添加内容
-               $("#videoShow tbody").html(tbody);
-           }
+            //添加内容
+            $("#videoShow tbody").html(tbody);
         }
-    });
+    })
 }

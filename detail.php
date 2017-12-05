@@ -2,6 +2,8 @@
 
 <?php
 session_start();
+    include_once "./tpl/modal.php";
+    include_once "./tpl/header.php";
     include_once "./api/dbConnect.php";
     //根据传入的id从数据库获取相应文章的信息
     $id = $_REQUEST['id'];
@@ -91,11 +93,6 @@ tagName2
 </head>
 
 <body>
-<?php
-
-include_once "./tpl/modal.php";
-include_once "./tpl/header.php";
-?>
 <div class="container main-container">
     <div class="container">
         <div class="row">
@@ -135,9 +132,9 @@ tagName1
                     <?php
                         //data-id 为元素添加自定义属性
                         if($row['url']){
-                            echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank' rel='nofollow'>{$row['url']}</a></span></div>";
+                            echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank'>{$row['url']}</a></span></div>";
                         }
-                        echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='glyphicon glyphicon-thumbs-up zan animated'></i></div>";
+                        echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
                     ?>
 
                 </div>
@@ -288,10 +285,10 @@ tagName4;
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="./js/emailAutoComplete.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/zan.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
-<script src="./js/common.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
 <script src="./js/imageLazyLoad.js"></script>

@@ -3,13 +3,8 @@
  */
 $(function () {
     new Promise((resolve,reject)=>{
-        $.ajax({
-            type:'get',
-            url:'./api/dateView/addView.php',
-            data:{bool:'0'},
-            success:function (data) {
-                resolve(data);
-            }
+        query('./api/dateView/addView.php',{bool:'0'},'get',true,function (data) {
+            resolve(data);
         })
     })
         .then(data=>{
@@ -20,13 +15,9 @@ $(function () {
             // console.log(max,now);
             // console.log((now-max)/t);//大于1为昨天
             if((now-max)/t>=1){
-                $.ajax({
-                    type:'get',
-                    url:'./api/dateView/addView.php',
-                    data:{bool:'1'},
-                    success:function (data) {
-                        // console.log(data);
-                    }
+
+                query('./api/dateView/addView.php',{bool:'1'},'get',true,function (data) {
+
                 })
             }
     });

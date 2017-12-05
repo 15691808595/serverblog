@@ -16,20 +16,16 @@ function getRanArr(obj) {
 }
 
 function getRecommend() {
-    $.ajax({
-        type: "get",
-        url: "./api/showRecommend.php",
-        success: function (data) {
-            var obj=JSON.parse(data);
-            var html='';
-            var ranArr=getRanArr(obj);
-            $.each(obj,function (i,ele) {
-                if(ranArr.indexOf(i)>=0){
-                    html+=`<li class="list-group-item"><a href="detail.php?id=${ele.id}"  title="${ele.title}">${ele.title}</a> <span>${ele.visitor} Views</span></li>`;
-                }
-            });
+    query("./api/showRecommend.php",{},'get',true,function (data) {
+        var obj=JSON.parse(data);
+        var html='';
+        var ranArr=getRanArr(obj);
+        $.each(obj,function (i,ele) {
+            if(ranArr.indexOf(i)>=0){
+                html+=`<li class="list-group-item"><a href="detail.php?id=${ele.id}"  title="${ele.title}">${ele.title}</a> <span>${ele.visitor} Views</span></li>`;
+            }
+        });
 
-            $("#recommend").append(html);
-        },
-    });
+        $("#recommend").append(html);
+    })
 }

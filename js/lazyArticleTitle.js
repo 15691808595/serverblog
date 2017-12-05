@@ -25,29 +25,24 @@ $(function () {
 function getLazyArticleNum(everyNum,addNum) {
     $("#article thead tr").html("");
     $("#article tbody").html("");
-    $.ajax({
-        url:"./api/adminGetArticle.php",
-        type:"get",
-        data:{num:addNum,everyNum:everyNum},
-        async:false,
-        success:function (data, xhr) {
-            if(data!=0){
-                var arr=JSON.parse(data);
-                var json=arr.list;
-                var thead='';
-                for(var key in json[0]){
-                    thead+=`
+    query("./api/adminGetArticle.php",{num:addNum,everyNum:everyNum},'get',false,function (data) {
+        if(data!=0){
+            var arr=JSON.parse(data);
+            var json=arr.list;
+            var thead='';
+            for(var key in json[0]){
+                thead+=`
                 <td class="text-center">${key}</td>
                 `;
-                }
-                thead+=`<td class="text-center">操作</td>
+            }
+            thead+=`<td class="text-center">操作</td>
                     `;
-                //添加标题
-                $("#article thead tr").append(thead);
-                $.each(json,function (i,ele) {
-                    let tbody="";
+            //添加标题
+            $("#article thead tr").append(thead);
+            $.each(json,function (i,ele) {
+                let tbody="";
 
-                    tbody+=`
+                tbody+=`
                 <tr >
                     <td>${ele.id}</td>
                     <td><a href="adminDetails.php?id=${ele.id}">${ele.title}</a></td>
@@ -57,43 +52,36 @@ function getLazyArticleNum(everyNum,addNum) {
                     <td>${ele.visitor}</td>
                     <td>${ele.img}</td>`;
 
-                    if(ele.recommend==1){
-                        tbody+=`<td id="recommend_${ele.id}" class="recommend_yes">已推荐</td>`;
-                    }else{
-                        tbody+=`<td class="del_color" id="recommend_${ele.id}" class="recommend_no">未推荐</td>`;
-                    }
+                if(ele.recommend==1){
+                    tbody+=`<td id="recommend_${ele.id}" class="recommend_yes">已推荐</td>`;
+                }else{
+                    tbody+=`<td class="del_color" id="recommend_${ele.id}" class="recommend_no">未推荐</td>`;
+                }
 
-                    tbody+=`<td class="del_color" id="article_del_${ele.id}" >删除</td>
+                tbody+=`<td class="del_color" id="article_del_${ele.id}" >删除</td>
                 </tr>
                 `;
 
 
-                    //添加内容
-                    $("#article tbody").append(tbody);
-                })
-            }
+                //添加内容
+                $("#article tbody").append(tbody);
+            })
         }
-    });
+    })
 }
 // 点击删除文章
 $(function () {
     $(document).on("click","[id*=article_del_]",function () {
         var id=$(this).attr("id").substring($(this).attr("id").lastIndexOf("_")+1);
-        $.ajax({
-            url:"./api/delArticle.php",
-            type:"get",
-            data:{id:id,type:'delArticle'},
-            success:function (data) {
-
-                $(".my-modal-body").html(data);
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-                $("thead tr").html("");
-                $("tbody").html("");
-                getLazyArticleNum(12,2);
-            }
+        query("./api/delArticle.php",{id:id,type:'delArticle'},'get',true,function (data) {
+            $(".my-modal-body").html(data);
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+            $("thead tr").html("");
+            $("tbody").html("");
+            getLazyArticleNum(12,2);
         })
     })
 });
@@ -111,21 +99,13 @@ $(function () {
             $(this).html("未推荐").removeClass("recommend_yes").addClass("recommend_no");
             bool=0;
         }
-        $.ajax({
-            url:"./api/recommend.php",
-            type:"get",
-            data:{id,bool},
-            success:function (data) {
-
-                if(data==="0"){
-                    $(".my-modal-body").html("只有博客的主人刘伟波才可以推荐哦,您点击是没有用的哦！");
-                    $("#myModal").modal("show");
-                    setTimeout(function () {
-                        $("#myModal").modal("hide");
-                    },1200);
-                }
-
-
+        query("./api/recommend.php",{id,bool},'get',true,function (data) {
+            if(data==="0"){
+                $(".my-modal-body").html("只有博客的主人刘伟波才可以推荐哦,您点击是没有用的哦！");
+                $("#myModal").modal("show");
+                setTimeout(function () {
+                    $("#myModal").modal("hide");
+                },1200);
             }
         })
     })

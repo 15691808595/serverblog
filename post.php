@@ -18,11 +18,6 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="editor/css/wangEditor.min.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
-    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
 </head>
 
 <body>

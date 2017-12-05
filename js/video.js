@@ -4,18 +4,13 @@
 $(function () {
     var txt_arr=[];
     var video_arr=[];
-    $.ajax({
-        url:"./api/adminGetVideo.php",
-        type:"get",
-        async:false,
-        success:function (data, xhr) {
-            if(data!=="0"){
-                var arr=JSON.parse(data);
-                $.each(arr.list,function (i,ele) {
-                    txt_arr[i]=ele.name;
-                    video_arr[i]=ele.url;
-                })
-            }
+    query("./api/adminGetVideo.php",{},'get',false,function (data) {
+        if(data!=="0"){
+            var arr=JSON.parse(data);
+            $.each(arr.list,function (i,ele) {
+                txt_arr[i]=ele.name;
+                video_arr[i]=ele.url;
+            })
         }
     });
    var html="";

@@ -58,24 +58,19 @@ $(function () {
             return false;
         }
         if(nextValid()){
-            $.ajax({
-                type: "post",
-                url: "./api/contact.php",
-                data: {
-                    username: d.username,
-                    email: d.email,
-                    qq: d.qq,
-                    phone:d.phone,
-                    message:d.message,
-                },
-                success: function (data, status, xhr) {
-                    $(".my-modal-body").html(data);
-                    $("#myModal").modal("show");
-                    setTimeout(function () {
-                        $("#myModal").modal("hide");
-                    },1200);
-                }
-            });
+            query("./api/contact.php",{
+                username: d.username,
+                email: d.email,
+                qq: d.qq,
+                phone:d.phone,
+                message:d.message,
+            },'post',true,function (data) {
+                $(".my-modal-body").html(data);
+                $("#myModal").modal("show");
+                setTimeout(function () {
+                    $("#myModal").modal("hide");
+                },1200);
+            })
 
         }
 
