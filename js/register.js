@@ -37,42 +37,28 @@ $("#submit").click(function () {
     }
 
     var data = {username:username,pass:pass,email:email};
-    $.ajax({
-        type:'post',
-        url:"./api/register.php",
-        data:data,
-        success:function (data,status,xhr) {
-            if(data === "1"){
-                $(".my-modal-body").html("注册失败");
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-            }else if(data==="0"){
-                $(".my-modal-body").html("注册成功");
-                $("#myModal").modal("show");
-                // location.href= "login.php";
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-            }else {
-                $(".my-modal-body").html(data);
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-            }
-        },
-        error:function (xhr,status) {
-            $(".my-modal-body").html("网络繁忙！");
+    query("./api/register.php",data,'post',true,function (data) {
+        if(data === "1"){
+            $(".my-modal-body").html("注册失败");
             $("#myModal").modal("show");
             setTimeout(function () {
                 $("#myModal").modal("hide");
             },1200);
-        },
-        beforeSend:function () {
+        }else if(data==="0"){
+            $(".my-modal-body").html("注册成功");
+            $("#myModal").modal("show");
+            // location.href= "login.php";
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+        }else {
+            $(".my-modal-body").html(data);
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
         }
-    });
+    })
 
     return false;
 });

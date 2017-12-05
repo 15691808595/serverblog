@@ -13,25 +13,13 @@ $("#submit").click(function () {
     var content = editor.$txt.html();
     //获取在线编辑器的纯文本
     var text = editor.$txt.text();
-    $.ajax({
-        type:"post",
-        url:"./api/postArticle.php",
-        data:{title:title,url:url,content:content,text:text,type:type,short:short},
-        success:function (data, status, xhr) {
-            $(".my-modal-body").html(data);
-            $("#myModal").modal("show");
-            setTimeout(function () {
-                $("#myModal").modal("hide");
-            },1200);
-        },
-        error:function (xhr, stauts) {
-            $(".my-modal-body").html("网络繁忙！");
-            $("#myModal").modal("show");
-            setTimeout(function () {
-                $("#myModal").modal("hide");
-            },1200);
-        }
-    });
+    query("./api/postArticle.php",{title:title,url:url,content:content,text:text,type:type,short:short},'post',true,function (data) {
+        $(".my-modal-body").html(data);
+        $("#myModal").modal("show");
+        setTimeout(function () {
+            $("#myModal").modal("hide");
+        },1200);
+    })
 
     return false;
 });

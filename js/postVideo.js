@@ -8,19 +8,14 @@ $("#submit").click(function () {
     var url = $("[name='videoUrl']").val();
 
     if(title!=="" && url!==""){
-        $.ajax({
-            type:"post",
-            url:"./api/postVideo.php",
-            data:{title:title,url:url},
-            success:function (data, status, xhr) {
-                $(".my-modal-body").html(data);
-                $("#myModal").modal("show");
-                setTimeout(function () {
-                    $("#myModal").modal("hide");
-                },1200);
-                getVideoShow();
-            }
-        });
+        query("./api/postVideo.php",{title:title,url:url},'post',true,function (data) {
+            $(".my-modal-body").html(data);
+            $("#myModal").modal("show");
+            setTimeout(function () {
+                $("#myModal").modal("hide");
+            },1200);
+            getVideoShow();
+        })
     }
 
 

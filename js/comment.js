@@ -46,46 +46,32 @@ $(function () {
             $("#comment-tips").addClass("error").text("必填内容不能为空");
             return false;
         }
-            $.ajax({
-                type: "post",
-                url: "./api/saveComment.php",
-                async:false,
-                data: {
-                    user: d.user,
-                    email: d.email,
-                    website: d.website,
-                    msg:d.txt,
-                    a_id,
-                },
-                success: function (data, status, xhr) {
-                    if(data==='1'){
-                        $("#comment-form")[0].reset();
-                    }
-                    if(data==='3'){
-                        $("#comment-tips").addClass("error").text("名称重复！");
-                    }
-
-                }
-            });
+        query("./api/saveComment.php",{
+            user: d.user,
+            email: d.email,
+            website: d.website,
+            msg:d.txt,
+            a_id,
+        },'post',false,function (data) {
+            if(data==='1'){
+                $("#comment-form")[0].reset();
+            }
+            if(data==='3'){
+                $("#comment-tips").addClass("error").text("名称重复！");
+            }
+        })
         showComments();
 
         return false;
     });
 
     function showComments() {
-        $.ajax({
-            type: "post",
-            url: "./api/showComment.php",
-            async:false,
-            data: {
-                a_id,
-            },
-            success: function (data, status, xhr) {
-                $("#showComment").html();
-                var obj=JSON.parse(data);
-                var html='';
-                $.each(obj.list,function (i,ele) {
-                    html+=`
+        query("./api/showComment.php",{a_id},'post',false,function (data) {
+            $("#showComment").html();
+            var obj=JSON.parse(data);
+            var html='';
+            $.each(obj.list,function (i,ele) {
+                html+=`
                      <li >
                             <div class="comment-body">
                                 <div class="comment-author ">
@@ -101,10 +87,9 @@ $(function () {
                             </div>
                         </li>
                     `;
-                });
+            });
 
-                $("#showComment").html(html);
-            }
-        });
+            $("#showComment").html(html);
+        })
     }
 });

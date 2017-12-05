@@ -3,25 +3,22 @@
  */
 
 $(function () {
-    $.ajax({
-        url:"./api/adminGetVisitor.php",
-        type:"get",
-        success:function (data, xhr) {
-            if(data!=="0"){
-                var arr=JSON.parse(data);
-                var json=arr.list;
-                var thead='';
-                for(var key in json[0]){
-                    thead+=`
+    query("./api/adminGetVisitor.php",{},'get',true,function (data) {
+        if(data!=="0"){
+            var arr=JSON.parse(data);
+            var json=arr.list;
+            var thead='';
+            for(var key in json[0]){
+                thead+=`
                 <td class="text-center">${key}</td>
                 `;
-                }
-                //添加标题
-                $("#visit thead tr").append(thead);
-                $.each(json,function (i,ele) {
-                    let tbody="";
+            }
+            //添加标题
+            $("#visit thead tr").append(thead);
+            $.each(json,function (i,ele) {
+                let tbody="";
 
-                    tbody+=`
+                tbody+=`
                 <tr >
                     <td>${ele.id}</td>
                     <td style="width: 100px">${ele.address}</a></td>
@@ -30,12 +27,10 @@ $(function () {
                     <td style="width: 180px">${ele.createTime}</td>`;
 
 
-                    //添加内容
-                    $("#visit tbody").append(tbody);
-                })
-            }
-
+                //添加内容
+                $("#visit tbody").append(tbody);
+            })
         }
-    });
+    })
 });
 

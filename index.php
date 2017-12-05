@@ -176,13 +176,13 @@ mysql_query($sql);
 <div class="tab-pc text-center">
     <button class="btn btn-danger btn-sm">电脑端</button>
 </div>
+
 <?php
     include_once  "./tpl/footer.php";
 ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="./js/zan.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>

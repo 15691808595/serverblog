@@ -2,7 +2,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top nav-main">
     <div class="container" >
         <div class="navbar-header">
-            <a href="index.php" target="_parent" class="animated navbar-brand my-brand logoname " title="刘伟波的个人博客 &raquo; 刘伟波-天天向上">LWB</a>
+            <a href="detail.php?id=146" target="_parent" class="animated navbar-brand my-brand logoname " title="了解刘伟波">LWB</a>
             <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

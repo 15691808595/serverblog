@@ -13,15 +13,16 @@ session_start();
 	<!--引入bootstrap css样式文件-->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
-    <link rel="stylesheet" href="css/global.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+
+
+    <<link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/life.css">
 	<link rel="shortcut icon" href="./img/favicon.ico">
-	<!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-	 <!--[if lt IE 9]>
-		<script src="./js/html5shiv.js"></script>
-		<script src="./js/respond.js"></script>
-    <![endif]-->
     <style>
 
         @media (max-width: 768px) {
@@ -93,14 +94,14 @@ session_start();
 		include_once "./tpl/footer.php";
 	?>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
     <script src="js/life.js"></script>
     <!--推荐-->
     <script src="./js/recommend.js"></script>
     <!--搞笑和激励-->
     <script src="./js/fightAndInteresting.js"></script>
-<!--    文章归档-->
+    <!--    文章归档-->
     <script src="./js/articleTime.js"></script>
+
 </body>
 </html>

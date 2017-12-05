@@ -64,13 +64,8 @@ $(function () {
             resolve(ip);
         })
     }).then((real_ip)=>{
-        $.ajax({
-            type:'post',
-            url:"./api/saveIp.php",
-            data:{ip,address:returnCitySN['cname'],real_ip},
-            success:function (data,status,xhr) {
-            }
-        });
+        query("./api/saveIp.php",{ip,address:returnCitySN['cname'],real_ip},'post',true,function (data) {
+        })
     })
 
 
