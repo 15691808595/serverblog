@@ -57,3 +57,32 @@ function query(url,data,type,async,callback) {
         }
     });
 }
+//将body滚动条移缓慢移动顶端
+function moveTop() {
+    $("html,body").animate({
+        scrollTop:0
+    },500)
+}
+
+// 回到顶部
+$(function () {
+    var fixtop=$(".fixtop");
+    fixtop.on('click',function () {
+        moveTop();
+    });
+    $(window).on('scroll',function () {
+        var s=$(this).scrollTop();
+        var slideHeight=$(".aside-wrap").height();
+        if(s>200){
+            fixtop.fadeIn()
+        }else {
+            fixtop.fadeOut()
+        }
+        if(s>slideHeight){
+            $("#recommend").addClass('fiexd-article')
+        }else {
+
+            $("#recommend").removeClass('fiexd-article')
+        }
+    });
+})

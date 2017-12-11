@@ -72,7 +72,8 @@
 <?php
     include_once  "./tpl/footer.php";
 ?>
-
+<!--回到顶部-->
+<div class="fixtop "><span class="glyphicon glyphicon-chevron-up"></span></div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js" type="text/javascript"></script> 
@@ -91,21 +92,20 @@
         </p>
     </div>
 </script>
-<!--分页-->
-<script type="text/javascript" src="js/paging.js"></script>
-<script>
-</script>
+<!--分页插件-->
+<script type="text/javascript" src="js/min/paging.2b6de70.js"></script>
+
 <!--->
 <script src="./js/common.js"></script>
-<script src="./js/page.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
-<!--搜索功能-->
-<script src="./js/search.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
 <!--每日浏览-->
 <script src="./js/view/view.js"></script>
+
+
+<script src="./js/blog.js"></script>
 
 </body>
 </html>

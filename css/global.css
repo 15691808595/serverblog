@@ -74,7 +74,14 @@ body {
     padding-right: 15px;
     padding-left: 15px;
 }
-
+.copyCode{
+    padding-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.article-content pre.active{
+    border: 2px solid #16bcd4;
+}
 /*文章发布按钮*/
 .post-action, .post-action:hover {
     color: #fff;
@@ -413,3 +420,31 @@ form:nth-child(1) {
     }
 }
 
+.fiexd-article{
+    position: fixed;
+    width: 16%;
+    z-index: 2;
+}
+.fixtop{
+    display: none;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    width: 50px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    transition: all .5s;
+    text-align: center;
+    cursor: pointer;
+}
+.fixtop span{
+    font-size: 32px;
+    text-align: center;
+    line-height: 56px;
+    color: white;
+}
+.fixtop:hover{
+    background-color: rgba(0,0,0,0.9);
+
+}

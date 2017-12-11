@@ -103,13 +103,13 @@ tagname;
 <script src="./editor/js/wangEditor.min.js"></script>
 <!--在线编辑器初始化-->
 <script src="./js/editorInit.js"></script>
-<!--ajax发表文章-->
-<script src="./js/postArticle.js"></script>
 <!--定时器-->
 <script src="./js/timer.js"></script>
 <script src="./js/common.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
+<!--ajax发表文章-->
+<script src="./js/postArticle.js"></script>
 </body>
 
 </html>

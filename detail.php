@@ -1,41 +1,39 @@
-﻿
-
-<?php
+﻿<?php
 session_start();
-    include_once "./tpl/modal.php";
-    include_once "./tpl/header.php";
-    include_once "./api/dbConnect.php";
-    //根据传入的id从数据库获取相应文章的信息
-    $id = $_REQUEST['id'];
-    //每次浏览某一篇文章时，根据id将相应的文章浏览次数加1
+include_once "./tpl/modal.php";
+include_once "./tpl/header.php";
+include_once "./api/dbConnect.php";
+//根据传入的id从数据库获取相应文章的信息
+$id = $_REQUEST['id'];
+//每次浏览某一篇文章时，根据id将相应的文章浏览次数加1
 
-    $sql = "update article2 set visitor=visitor+1 where id=$id";
+$sql = "update article2 set visitor=visitor+1 where id=$id";
 
-    mysql_query($sql);
-
-
-    //浏览次数+1 visitor   "update article2 set visitor=visitor+1 where id=$id";
-
-    //根据id查询文章信息
-    $sql = "select * from article2 where id=$id";
-    $result = mysql_query($sql);
-    $row = mysql_fetch_assoc($result);
+mysql_query($sql);
 
 
-    //对文章内容进行一次urldecode()解密
+//浏览次数+1 visitor   "update article2 set visitor=visitor+1 where id=$id";
 
-    $row['content'] = urldecode($row['content']);
-    //将时间戳转化成时间日期格式
-    date_default_timezone_set('prc');
-    $row['createTime'] = date("Y-m-d H:i",$row['createTime']);
+//根据id查询文章信息
+$sql = "select * from article2 where id=$id";
+$result = mysql_query($sql);
+$row = mysql_fetch_assoc($result);
 
-    if(!$row['lastModify']){
-        $row['lastModify'] = $row['createTime'];
-    }else{
-        $row['lastModify'] = date("Y-m-d H:i",$row['lastModify']);
-    }
 
-    //$row -->id , user ,title,content,url,visitor,like,createTime
+//对文章内容进行一次urldecode()解密
+
+$row['content'] = urldecode($row['content']);
+//将时间戳转化成时间日期格式
+date_default_timezone_set('prc');
+$row['createTime'] = date("Y-m-d H:i", $row['createTime']);
+
+if (!$row['lastModify']) {
+    $row['lastModify'] = $row['createTime'];
+} else {
+    $row['lastModify'] = date("Y-m-d H:i", $row['lastModify']);
+}
+
+//$row -->id , user ,title,content,url,visitor,like,createTime
 
 ?>
 <!DOCTYPE html>
@@ -43,11 +41,22 @@ session_start();
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="renderer" content="webkit" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit"/>
+
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+
 
     <?php
-                                echo <<<tagName2
+    echo <<<tagName2
                                
 
                                 <meta http-equiv="description" content="{$row['title']}" />
@@ -57,37 +66,48 @@ session_start();
                             
                                 <title>{$row['title']} &raquo; 刘伟波-天天向上</title>
 tagName2
-                            ?>
+    ?>
 
 
-
-
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
 
     <style>
-        .lead{
+        .lead {
             overflow-x: hidden;
         }
-        ul,li{list-style:none;}
+
+        ul, li {
+            list-style: none;
+        }
+
         /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
         /*.parentCls{width:200px;}*/
-        .parentCls ul{
+        .parentCls ul {
             left: 14px;
         }
-        .auto-tip li{width:100%;height:22px;line-height:22px;font-size:14px;}
-        .auto-tip li em{font-style: normal}
-        .auto-tip li.hoverBg{background:#ddd;cursor:pointer;}
-        .red{color:#9e9898;}
-        .hidden {display:none;}
+
+        .auto-tip li {
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            font-size: 14px;
+        }
+
+        .auto-tip li em {
+            font-style: normal
+        }
+
+        .auto-tip li.hoverBg {
+            background: #ddd;
+            cursor: pointer;
+        }
+
+        .red {
+            color: #9e9898;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -97,7 +117,7 @@ tagName2
         <div class="row">
             <!--侧边栏-->
             <?php
-                include_once "./tpl/aside.php";
+            include_once "./tpl/aside.php";
             ?>
             <!--文章内容-->
             <div class="detail-p col-sm-9 animated bounceInRight">
@@ -105,7 +125,7 @@ tagName2
                     <div class="row">
                         <div class="col-sm-12 list-container">
                             <?php
-                                echo <<<tagName1
+                            echo <<<tagName1
                                 <h3 class="page-header text-center">{$row['title']}</h3>
                                 <!--文章详情-->
                                 <div class="article-info">
@@ -129,28 +149,28 @@ tagName1
                 <!--点赞-->
                 <div class="row" style="margin: 0;">
                     <?php
-                        //data-id 为元素添加自定义属性
-                        if($row['url']){
-                            echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank' rel='nofollow'>{$row['url']}</a></span></div>";
-                        }
-                        echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
+                    //data-id 为元素添加自定义属性
+                    if ($row['url']) {
+                        echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank' rel='nofollow'>{$row['url']}</a></span></div>";
+                    }
+                    echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
                     ?>
 
                 </div>
                 <!--上一篇 下一篇-->
                 <?php
-                $prev=$id-1;//上一篇
-                $next=$id+1;//下一篇
+                $prev = $id - 1;//上一篇
+                $next = $id + 1;//下一篇
 
-                $sqlId="select id from article2";
-                $resultId=mysql_query($sqlId);
-                $arrId=[];
-                while ($rowId = mysql_fetch_assoc($resultId)){
-                    $arrId[]=$rowId;
+                $sqlId = "select id from article2";
+                $resultId = mysql_query($sqlId);
+                $arrId = [];
+                while ($rowId = mysql_fetch_assoc($resultId)) {
+                    $arrId[] = $rowId;
                 }
-                $len=count($arrId);
-                $max=$arrId[$len-1]['id'];//id最大值
-                $min=$arrId[0]['id'];//id最小值
+                $len = count($arrId);
+                $max = $arrId[$len - 1]['id'];//id最大值
+                $min = $arrId[0]['id'];//id最小值
 
                 //采用递归查找下一篇的title
                 function getNext($arrId, $next, $max)
@@ -169,6 +189,7 @@ tagName1
                     }
                     getNext($arrId, $next + 1, $max);
                 }
+
                 getNext($arrId, $next, $max);
 
                 //采用递归查找上一篇的id
@@ -188,24 +209,25 @@ tagName1
                     }
                     getPrev($arrId, $prev - 1, $min);
                 }
+
                 getPrev($arrId, $prev, $min);
 
-                if($next<=$max ) {
+                if ($next <= $max) {
                     //获取下一篇title
                     $sqlNext = "select title from article2 where id=$nextId";
                     $resultNext = mysql_query($sqlNext);
                     $rowNext = mysql_fetch_assoc($resultNext);
 
                 }
-                if($prev>=$min ) {
+                if ($prev >= $min) {
                     //获取上一篇title
                     $sqlPrev = "select title from article2 where id=$prevId";
                     $resultPrev = mysql_query($sqlPrev);
                     $rowPrev = mysql_fetch_assoc($resultPrev);
                 }
 
-                if($next<=$max && $prev>=$min) {
-                        echo <<<tagName2
+                if ($next <= $max && $prev >= $min) {
+                    echo <<<tagName2
                 <div class="row">
                     <a href="detail.php?id=$prevId">上一篇：{$rowPrev["title"]}</a>
                 </div>
@@ -213,14 +235,14 @@ tagName1
                     <a href="detail.php?id=$nextId">下一篇：{$rowNext["title"]}</a>
                 </div>
 tagName2;
-                }else if($next>$max){
+                } else if ($next > $max) {
                     echo <<<tagName3
                 <div class="row">
                     <a href="detail.php?id=$prevId">上一篇：{$rowPrev["title"]}</a>
                 </div>
 tagName3;
 
-                }else {
+                } else {
                     echo <<<tagName4
                 <div class="row">
                     <a href="detail.php?id=$nextId">下一篇：{$rowNext["title"]}</a>
@@ -244,17 +266,17 @@ tagName4;
                             <div class="col-sm-5 parentCls">
                                 <input type="text" name="email" class="form-control inputElem">
                             </div>
-                            <div class="col-sm-5"> <span>邮件地址(不会被公开) (必须)</span></div>
+                            <div class="col-sm-5"><span>邮件地址(不会被公开) (必须)</span></div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-5">
                                 <input type="text" name="website" class="form-control">
                             </div>
-                            <div class="col-sm-5"> <span>网站</span></div>
+                            <div class="col-sm-5"><span>网站</span></div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-8">
-                                <textarea class="form-control" name="txt" id=""  rows="5" placeholder="(必填)"></textarea>
+                                <textarea class="form-control" name="txt" id="" rows="5" placeholder="(必填)"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -278,22 +300,26 @@ tagName4;
     </div>
 </div>
 <?php
-    include_once  "./tpl/footer.php";
+include_once "./tpl/footer.php";
 ?>
+<!--回到顶部-->
+<div class="fixtop "><span class="glyphicon glyphicon-chevron-up"></span></div>
 
+<!--公共js-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="./js/emailAutoComplete.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="./js/min/emailAutoComplete.9bd3f68.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/zan.js"></script>
-<!--定时器-->
 <script src="./js/timer.js"></script>
+
+
 <!--推荐-->
 <script src="./js/recommend.js"></script>
-<script src="./js/imageLazyLoad.js"></script>
-<!--评论-->
-<script src="./js/comment.js"></script>
 <!--每日浏览-->
 <script src="./js/view/view.js"></script>
+
+<script src="./js/detail.js"></script>
 </body>
 </html>

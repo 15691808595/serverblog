@@ -137,13 +137,15 @@ include_once "./tpl/modal.php";
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/common.js"></script>
-<script src="js/adminMessage.js"></script>
-<script src="js/adminVisitor.js"></script>
-<script src="js/adminAllVisitor.js"></script>
-<script src="js/postVideo.js"></script>
-<script src="js/adminVideoShow.js"></script>
-<script src="js/lazyArticleTitle.js"></script>
-<script src="js/adminComment.js"></script>
+<script src="js/min/common.24b140d.js"></script>
+
+<script src="./js/min/admin.1943380.js"></script>
+<!--<script src="js/adminMessage.js"></script>-->
+<!--<script src="js/adminVisitor.js"></script>-->
+<!--<script src="js/adminAllVisitor.js"></script>-->
+<!--<script src="js/postVideo.js"></script>-->
+<!--<script src="js/adminVideoShow.js"></script>-->
+<!--<script src="js/lazyArticleTitle.js"></script>-->
+<!--<script src="js/adminComment.js"></script>-->
 </body>
 </html>

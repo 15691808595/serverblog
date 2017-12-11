@@ -94,13 +94,12 @@ session_start();
 	?>
 
     <script src="js/common.js"></script>
-    <script src="js/life.js"></script>
     <!--推荐-->
     <script src="./js/recommend.js"></script>
     <!--搞笑和激励-->
     <script src="./js/fightAndInteresting.js"></script>
-    <!--    文章归档-->
-    <script src="./js/articleTime.js"></script>
+
+    <script src="js/life.js"></script>
 
 </body>
 </html>

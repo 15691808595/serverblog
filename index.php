@@ -187,12 +187,9 @@ mysql_query($sql);
 <script src="./js/common.js"></script>
 <!--推荐-->
 <script src="./js/recommend.js"></script>
-<!--视频控制-->
-<script src="./js/video.js"></script>
 <!--搞笑和激励-->
 <script src="./js/fightAndInteresting.js"></script>
-<script src="./js/saveIp.js"></script>
-<!--每日浏览-->
-<script src="./js/view/addView.js"></script>
+
+<script src="./js/index.js"></script>
 </body>
 </html>
