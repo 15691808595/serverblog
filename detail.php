@@ -153,7 +153,7 @@ tagName1
                     if ($row['url']) {
                         echo "<div class='pull-left'><span style='word-break: break-all;'><strong>原文URL：</strong>&nbsp;&nbsp;&nbsp;<a  href='{$row['url']}' target='_blank' rel='nofollow'>{$row['url']}</a></span></div>";
                     }
-                    echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='fa fa-thumbs-up fa-2x zan animated'></i></div>";
+                    echo "<div class='pull-right'><span class='num-zan'>{$row['like']}</span><i data-id='{$id}' class='glyphicon glyphicon-thumbs-up zan animated'></i></div>";
                     ?>
 
                 </div>
@@ -310,16 +310,16 @@ include_once "./tpl/footer.php";
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<script src="./js/min/emailAutoComplete.9bd3f68.js"></script>
-<script src="./js/common.js"></script>
-<script src="./js/timer.js"></script>
 
 
+<script src="./js/min/emailAutoComplete.min.js"></script>
+<script src="./js/min/common.min.js"></script>
+<script src="./js/min/timer.min.js"></script>
 <!--推荐-->
-<script src="./js/recommend.js"></script>
+<script src="./js/min/recommend.min.js"></script>
 <!--每日浏览-->
-<script src="./js/view/view.js"></script>
+<script src="./js/min/view.min.js"></script>
 
-<script src="./js/detail.js"></script>
+<script src="./js/min/detail.min.js"></script>
 </body>
 </html>

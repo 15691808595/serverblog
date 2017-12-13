@@ -1,0 +1,1 @@
+$("#submit").click(function(){var a=$("[name\x3d'videoTitle']").val(),b=$("[name\x3d'videoUrl']").val();""!==a&&""!==b&&query("./api/postVideo.php",{title:a,url:b},"post",!0,function(a){$(".my-modal-body").html(a);$("#myModal").modal("show");setTimeout(function(){$("#myModal").modal("hide")},1200);getVideoShow()});return!1});

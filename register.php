@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
-    <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
     <style>
 
         @media (max-width: 768px) {
@@ -111,9 +106,13 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="./js/emailAutoComplete.js"></script>
-<script src="./js/common.js"></script>
-<!--<script src="./js/register.js"></script>-->
-<script src="./js/min/register.bd7e192.js"></script>
+
+
+
+
+
+<script src="./js/min/emailAutoComplete.min.js"></script>
+<script src="./js/min/common.min.js"></script>
+<script src="./js/min/register.min.js"></script>
 </body>
 </html>

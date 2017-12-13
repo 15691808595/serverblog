@@ -23,10 +23,6 @@
     <link rel="stylesheet" href="css/paging.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 
-    <!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.js"></script>
-    <![endif]-->
 
 </head>
 <body>
@@ -92,20 +88,17 @@
         </p>
     </div>
 </script>
-<!--分页插件-->
-<script type="text/javascript" src="js/min/paging.2b6de70.js"></script>
+<script src="./js/min/paging.min.js"></script>
+<script src="./js/min/common.min.js"></script>
 
-<!--->
-<script src="./js/common.js"></script>
 <!--定时器-->
-<script src="./js/timer.js"></script>
+<script src="./js/min/timer.min.js"></script>
 <!--推荐-->
-<script src="./js/recommend.js"></script>
+<script src="./js/min/recommend.min.js"></script>
 <!--每日浏览-->
-<script src="./js/view/view.js"></script>
+<script src="./js/min/view.min.js"></script>
 
-
-<script src="./js/blog.js"></script>
+<script src="./js/min/blog.min.js"></script>
 
 </body>
 </html>

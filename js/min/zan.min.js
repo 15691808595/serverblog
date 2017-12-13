@@ -1,0 +1,2 @@
+$(".zan").click(function(){var b=$(this).data("id");query("./api/addZan.php",{id:b},"post",!0,function(a){0==a?($(".my-modal-body").html("\u70b9\u8d5e\u6210\u529f"),$("#myModal").modal("show"),setTimeout(function(){$("#myModal").modal("hide")},1200),$(".zan").addClass("bounceIn"),a=parseInt($(".num-zan").html())+1,$(".num-zan").html(a)):(1==a?$(".my-modal-body").html("\u70b9\u8d5e\u5931\u8d25"):$(".my-modal-body").html("\u60a8\u5df2\u8d5e\u8fc7\u8be5\u6587\u7ae0"),$("#myModal").modal("show"),setTimeout(function(){$("#myModal").modal("hide")},
+1200))})});

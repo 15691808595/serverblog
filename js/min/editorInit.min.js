@@ -1,0 +1,1 @@
+var editor=new wangEditor("editor");editor.config.uploadImgUrl="./api/upload.php";var fns=editor.config.uploadImgFns;fns.onload=function(a,b){a=JSON.parse(a);console.log(a);editor.command(null,"insertHtml","\x3cimg src\x3d'"+a.url+"' /\x3e");$(".my-modal-body").html(a.msg);$("#myModal").modal("show")};fns.ontimeout=function(){};fns.onerror=function(){};editor.create();

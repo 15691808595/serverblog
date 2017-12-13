@@ -1,0 +1,2 @@
+$(function(){function c(c){for(var a=d;a<e;a++)b[a].offsetTop<f+c&&("https://15691808595.github.io/blogimg/loader.gif"===$(b).eq(a).attr("src")&&$(b).eq(a).attr("src",$(b).eq(a).attr("data-lazyImg")),d=a+1)}$(".detail-p img").each(function(b,a){$(a).attr("data-lazyImg",$(a).attr("src"))}).attr("src","https://15691808595.github.io/blogimg/loader.gif");var b=document.querySelectorAll(".detail-p img"),e=b.length,d=0,f=document.documentElement.clientHeight;c(0);$(window).scroll(function(){c(document.body.scrollTop||
+document.documentElement.scrollTop)})});

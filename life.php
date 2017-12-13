@@ -93,13 +93,15 @@ session_start();
 		include_once "./tpl/footer.php";
 	?>
 
-    <script src="js/common.js"></script>
-    <!--推荐-->
-    <script src="./js/recommend.js"></script>
-    <!--搞笑和激励-->
-    <script src="./js/fightAndInteresting.js"></script>
 
-    <script src="js/life.js"></script>
+
+    <script src="js/min/common.min.js"></script>
+    <!--推荐-->
+    <script src="./js/min/recommend.min.js"></script>
+    <!--搞笑和激励-->
+    <script src="./js/min/fightAndInteresting.min.js"></script>
+
+    <script src="js/min/life.min.js"></script>
 
 </body>
 </html>
