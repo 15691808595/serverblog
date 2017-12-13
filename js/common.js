@@ -37,10 +37,7 @@ function query(url,data,type,async,callback) {
 </div>
            `;
 
-            if(!$(".beforeLoading").length){
-
-                $("body").append(loading)
-            }
+            $("body").append(loading);
         },
         success:function (data, status, xhr) {
             callback(data)
@@ -53,7 +50,7 @@ function query(url,data,type,async,callback) {
             },1200);
         },
         complete: function(){
-            $(".beforeLoading").hide()
+            $(".beforeLoading").remove()
         }
     });
 }
