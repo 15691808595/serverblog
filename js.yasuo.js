@@ -2,7 +2,13 @@ let fs = require('fs');
 let join = require('path').join;
 let paths = require('path');
 var compressor = require('node-minify');
-
+compressor.minify({
+    compressor: 'gcc',
+    input: './js/blog.js',
+    output: './js/min/blog.min.js',
+    callback: function (err, min) {
+    }
+});
 /**
  *
  * @param startPath  起始目录文件夹路径
@@ -38,4 +44,4 @@ function findSync(startPath) {
     return result;
 }
 
-let fileNames = findSync('./js');
+// let fileNames = findSync('./js');
