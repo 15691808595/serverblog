@@ -75,26 +75,26 @@ $(function () {
     });
 
 
-    function getPage(num) {
-        var type = $("#type").data("type");
-        var wd = $("[name='wd']").val();
-        query("./api/getArticle.php",{num:num,type:type,wd:wd},'get',false,function (data) {
-            var result = JSON.parse(data);
-            //将结果集中的总页数赋值给total全局变量
-            total = result.allArticle;
-            pageNum = result.pageNum;
-            //添加之前现将文章列表容器里的内容清空
-            $(".list-container").html("");
-            //将文章列表数据遍历并添加到文章列表容器里
-            $("#tpl").tmpl(result.list).prependTo(".list-container");
-            $.each($(".post-item-container>h4>a"),function (index,ele) {
-                if(wd==ele.innerHTML){
-
-                }
-            })
-        })
-    }
 });
+function getPage(num) {
+    var type = $("#type").data("type");
+    var wd = $("[name='wd']").val();
+    query("./api/getArticle.php",{num:num,type:type,wd:wd},'get',false,function (data) {
+        var result = JSON.parse(data);
+        //将结果集中的总页数赋值给total全局变量
+        total = result.allArticle;
+        pageNum = result.pageNum;
+        //添加之前现将文章列表容器里的内容清空
+        $(".list-container").html("");
+        //将文章列表数据遍历并添加到文章列表容器里
+        $("#tpl").tmpl(result.list).prependTo(".list-container");
+        $.each($(".post-item-container>h4>a"),function (index,ele) {
+            if(wd==ele.innerHTML){
+
+            }
+        })
+    })
+}
 // 搜索
 $(function () {
     var timer = null;
