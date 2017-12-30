@@ -1,7 +1,5 @@
 ﻿<?php
 session_start();
-include_once "./tpl/modal.php";
-include_once "./tpl/header.php";
 include_once "./api/dbConnect.php";
 //根据传入的id从数据库获取相应文章的信息
 $id = $_REQUEST['id'];
@@ -112,6 +110,11 @@ tagName2
 </head>
 
 <body>
+<?php
+
+include_once "./tpl/modal.php";
+include_once "./tpl/header.php";
+?>
 <div class="container main-container">
     <div class="container">
         <div class="row">

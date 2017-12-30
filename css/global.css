@@ -284,6 +284,7 @@ ul {
 .a-img img {
     min-width: 200px
 }
+@media (max-width: 768px) {.a-img img{width: 200px;}}
 
 .login-tips {
     padding-left: 0;
@@ -321,7 +322,11 @@ form:nth-child(1) {
     z-index: 9999
 }
 
+
 @media (max-width: 768px) {
+    .beforeLoading img{
+        width: 150px;
+    }
     #my-msg, #recommend, #recommend-box, #tit-good-box, #video-box {
         display: none
     }
@@ -413,9 +418,11 @@ form:nth-child(1) {
 }
 
 .tab-pc {
-    margin-top: 20px
+    margin-top: 20px;
 }
-
+.tab-pc button{
+    opacity:0
+}
 @media (min-width: 768px) {
     .tab-pc {
         display: none
@@ -452,7 +459,18 @@ form:nth-child(1) {
     line-height: 56px;
     color: #fff
 }
-
+@media (max-width:768px) {
+    .fixtop {
+        right: 8px;
+        bottom: 23px;
+        width: 30px;
+        height: 30px;
+    }
+    .fixtop span {
+        font-size: 19px;
+        line-height: 30px;
+    }
+}
 .fixtop:hover {
     background-color: rgba(0, 0, 0, .9)
 }
