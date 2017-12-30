@@ -98,6 +98,7 @@
 <!--每日浏览-->
 <script src="./js/min/view.min.js"></script>
 
+<!--<script src="./js/blog.js"></script>-->
 <script src="./js/min/blog.min.js"></script>
 
 </body>
