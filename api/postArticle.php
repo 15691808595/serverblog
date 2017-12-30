@@ -32,6 +32,8 @@ $img = $type.".png";
 
 
     $createTime = time();
+    $weekarray=array("日","一","二","三","四","五","六");
+    $week= "星期".$weekarray[date("w",strtotime(date("Y-m-d",time())))];
 
     $user = $_SESSION['username'];
 
@@ -51,7 +53,7 @@ $img = $type.".png";
 
 
     //将文章内容添加到数据库里
-    $sql = "insert into article2(title,url,content,createTime,user,`type`,img,short) values('$title','$url','$content',$createTime,'$user','$type','$img','$short')";
+    $sql = "insert into article2(title,url,content,createTime,user,`type`,img,short,week) values('$title','$url','$content',$createTime,'$user','$type','$img','$short','$week')";
 
     $result = mysql_query($sql);
     //如果文章发布成功,则相应用户的文章数量加1

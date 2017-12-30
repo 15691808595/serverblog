@@ -133,7 +133,7 @@ include_once "./tpl/header.php";
                                 <!--文章详情-->
                                 <div class="article-info">
                                     <ul class="text-muted clearfix">
-                                        <li class="pull-left">发布时间：{$row['createTime']}</li>
+                                        <li class="pull-left">发布时间：{$row['createTime']}  {$row['week']}</li>
                                         <li class="pull-left">作者：{$row['user']}</li>
                                         <li class="pull-left">浏览次数：{$row['visitor']}</li>
                                         <li class="pull-left">最后修改：{$row['lastModify']}</li>
