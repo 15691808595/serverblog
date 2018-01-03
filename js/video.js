@@ -25,13 +25,10 @@ $(function () {
    var reg=new RegExp("http");
     var _video_arr=video_arr.reverse();
    $(document).on("click","#video-title li",function () {
-       console.log(_video_arr)
        if(reg.test(_video_arr[$(this).index()])){
            $("video").attr("src",_video_arr[$(this).index()])
        }else {
-           console.log("mp4/"+_video_arr[$(this).index()]+".mp4");
            $("video").attr("src","mp4/"+_video_arr[$(this).index()]+".mp4")
        }
-
    })
 });

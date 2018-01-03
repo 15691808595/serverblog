@@ -54,7 +54,7 @@ mysql_query($sql);
                             <div id="video-box" class="col-md-8 col-sm-12">
                                 <div class="row">
                                     <div id="media" class="col-md-7" >
-                                        <video src="mp4/420style.mp4" controls>您的浏览器不支持最新html标签，请使用最新浏览器！</video>
+                                        <video poster="" src="" controls>您的浏览器不支持最新html标签，请使用最新浏览器！</video>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="intro">
