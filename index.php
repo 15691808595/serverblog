@@ -116,8 +116,8 @@ mysql_query($sql);
                                             </li>
                                             <li class="hide-github">
                                                 <ul class="line-inblock">
-                                                    <li>github小游戏</li>
-                                                    <li class="address"><a href="https://15691808595.github.io/project/jq_pull_box.html" title="https://15691808595.github.io/project/jq_pull_box.html" target="_blank">点击进入</a></li>
+                                                    <li>张静静的相册</li>
+                                                    <li class="address"><a href="http://www.liuweibo.cn/lovezjj/" title="张静静的相册" target="_blank">点击进入</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
