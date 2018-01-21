@@ -82,7 +82,7 @@
         <h4><a href="detail.php?id=${id}" >${title}</a> <img src="./img/${img}" height="24" width="24" class="pull-right"/></h4>
         <p>${content}</p>
         <p class="text-danger">
-            ${user}&nbsp;&nbsp;&nbsp;&nbsp; ${createTime}&nbsp;&nbsp;&nbsp;&nbsp;
+            ${user}&nbsp;&nbsp;&nbsp;&nbsp; ${createTime}&nbsp;&nbsp;&nbsp;&nbsp;${week}&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="glyphicon glyphicon-eye-open"></i>&nbsp;${visitor}&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;${like}
         </p>

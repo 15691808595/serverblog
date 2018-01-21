@@ -28,11 +28,11 @@ $startIndex =  $pageNum*($num-1);     //获取数据的其实位置
 
 date_default_timezone_set('Asia/Shanghai');//设置时区
 if($type == "all"){
-    $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`type` from article2 order by createTime desc limit $startIndex,$pageNum";
+    $sql = "select `id`,`title`,`user`,`createTime`,week,`visitor`,`like`,`img`,`type` from article2 order by createTime desc limit $startIndex,$pageNum";
 }else if($type == "title"){
-    $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`type` from article2 where title like '%$wd%' order by createTime desc limit $startIndex,$pageNum";
+    $sql = "select `id`,`title`,`user`,`createTime`,week,`visitor`,`like`,`img`,`type` from article2 where title like '%$wd%' order by createTime desc limit $startIndex,$pageNum";
 }else{
-    $sql = "select `id`,`title`,`user`,`createTime`,`visitor`,`like`,`img`,`type` from article2 where type='$type' order by createTime desc limit $startIndex,$pageNum";
+    $sql = "select `id`,`title`,`user`,`createTime`,week,`visitor`,`like`,`img`,`type` from article2 where type='$type' order by createTime desc limit $startIndex,$pageNum";
 }
 
 $result = mysql_query($sql);
