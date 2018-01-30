@@ -27,6 +27,33 @@ session_start();
     <script src="./js/respond.js"></script>
     <![endif]-->
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .pre3d{
+            position: absolute;
+            width: 700px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px) translateZ(-20px) rotateX(-110deg) rotateY(-6deg) rotateZ(0deg) scaleX(2.6) scaleY(1) scaleZ(1);
+            transform-style: preserve-3d;
+            z-index: -1;
+        }
+        .pre3d img{
+            display: block;width: 100%;animation: z 5s linear 0s infinite;transform-style: preserve-3d;
+        }
+        @-webkit-keyframes z {
+            from {
+
+                transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+            }
+            to {
+
+                transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1);
+            }
+        }
+    </style>
 
 </head>
 
@@ -175,7 +202,10 @@ mysql_query($sql);
 <div class="tab-pc text-center">
     <button class="btn btn-danger btn-sm">电脑端</button>
 </div>
-
+<div class="pre3d"
+">
+    <img class="page0_round" src="img/ttround.png" >
+</div>
 <?php
     include_once  "./tpl/footer.php";
 ?>

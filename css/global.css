@@ -13,6 +13,15 @@ body {
     padding-bottom: 85px;
     background-color: rgba(255, 255, 255, .3)
 }
+body::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background: #29a9df;
+}
+body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #e6e6e6;
+}
 
 @media (max-width: 768px) {
     #music-wrapper, #post-btn, .advertisement, .online-contact-container, .site-state-container {
