@@ -138,7 +138,7 @@ mysql_query($sql);
                                             <li class="hide-github">
                                                 <ul class="line-inblock">
                                                     <li>github</li>
-                                                    <li class="address"><a href="https://15691808595.github.io/" title="https://15691808595.github.io/" target="_blank">点击进入</a></li>
+                                                    <li class="address"><a href="https://github.com/15691808595/serverblog" title="https://github.com/15691808595/serverblog" target="_blank">点击进入</a></li>
                                                 </ul>
                                             </li>
                                             <li class="hide-github">
