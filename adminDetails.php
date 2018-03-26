@@ -119,6 +119,8 @@ tagName1
     ?>
 </div>
 
+<!--回到顶部-->
+<div class="fixtop "><span class="glyphicon glyphicon-chevron-up"></span></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -132,5 +134,10 @@ tagName1
 <!--在线编辑器初始化-->
 <script src="./js/min/editorInit.min.js"></script>
 <script src="./js/min/adminUpdateArticle.min.js"></script>
+<script>
+    $("#editor").on('blur',function () {
+        $("#submit").click();
+    })
+</script>
 </body>
 </html>
