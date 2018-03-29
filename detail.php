@@ -52,7 +52,6 @@ if (!$row['lastModify']) {
     <link rel="shortcut icon" href="./img/favicon.ico">
 
 
-
     <?php
     echo <<<tagName2
                                
@@ -65,7 +64,6 @@ if (!$row['lastModify']) {
                                 <title>{$row['title']} &raquo; 刘伟波-天天向上</title>
 tagName2
     ?>
-
 
 
     <style>
@@ -106,6 +104,20 @@ tagName2
         .hidden {
             display: none;
         }
+
+        .list-container{
+            position: relative;
+        }
+        .export-word {
+            position: absolute;
+            top: 90px;
+            right: 0
+        }
+        @media (max-width: 768px){
+            .export-word{
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -126,7 +138,7 @@ include_once "./tpl/header.php";
             <div class="detail-p col-sm-9 animated bounceInRight">
                 <div class="post-list-container">
                     <div class="row">
-                        <div class="col-sm-12 list-container">
+                        <div class="col-sm-12 list-container" >
                             <?php
                             echo <<<tagName1
                                 <h3 class="page-header text-center">{$row['title']}</h3>
@@ -140,6 +152,14 @@ include_once "./tpl/header.php";
                                         <li class="pull-left">修改次数：{$row['modifyCount']}</li>
                                     </ul>
                                 </div>
+                                <div class="export-word"  >
+    <a class="btn btn-default jquery-word-export" href="javascript:void(0)" style="color: aqua">
+        <span class="word-icon"></span>
+        导出为.doc文档
+    </a>
+</div>
+                                
+
                                 <!--文章内容-->
                                 <div class="article-content lead" style="font-size:15px;">
                                     {$row['content']}
@@ -324,5 +344,15 @@ include_once "./tpl/footer.php";
 <script src="./js/min/view.min.js"></script>
 
 <script src="./js/min/detail.min.js"></script>
+<script type="text/javascript" src="js/FileSaver.js"></script>
+<script type="text/javascript" src="js/jquery.wordexport.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $("a.jquery-word-export").click(function (event) {
+            $(".article-content.lead").wordExport($(".page-header").html());
+        });
+    });
+</script>
 </body>
 </html>
