@@ -40,7 +40,7 @@
                         <div class="list-group-item  text-center">
                             <a href="index.php" class="btn btn-success btn-sm" style="color:#fff!important;"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;加关注</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://15691808595.github.io/" target="_blank" class="btn btn-success btn-sm" style="color:#fff!important;"><i class="fa fa-envelope"></i>&nbsp;&nbsp;github</a>
+                            <a href="https://Weibozzz.github.io/" target="_blank" class="btn btn-success btn-sm" style="color:#fff!important;"><i class="fa fa-envelope"></i>&nbsp;&nbsp;github</a>
                         </div>
                     </div>
                 </div>
