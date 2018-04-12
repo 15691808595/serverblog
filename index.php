@@ -147,12 +147,6 @@ mysql_query($sql);
                                                     <li class="address"><a href="https://github.com/15691808595/serverblog" title="https://github.com/15691808595/serverblog" target="_blank">点击进入</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="hide-github">
-                                                <ul class="line-inblock">
-                                                    <li>张静静的相册</li>
-                                                    <li class="address"><a href="http://www.liuweibo.cn/lovezjj/" title="张静静的相册" target="_blank">点击进入</a></li>
-                                                </ul>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
