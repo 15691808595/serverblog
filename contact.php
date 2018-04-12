@@ -21,6 +21,9 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <style>
         ul,li{list-style:none;}
         /*.inputElem {width:198px;height:22px;line-height:22px;border:1px solid #ff4455;}*/
@@ -109,5 +112,9 @@ session_start();
 <!--定时器-->
 <script src="./js/min/timer.min.js"></script>
 <script src="./js/min/contact.min.js"></script>
+<script>
+    NProgress.start();
+    NProgress.done();
+</script>
 </body>
 </html>

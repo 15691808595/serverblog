@@ -14,6 +14,9 @@ session_start();
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!--引入html5shiv.js 和 respond.js 是IE8支持HTML5新标签和媒体查询-->
 
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 </head>
 <body>
 <?php
@@ -138,6 +141,10 @@ tagName1
     $("#editor").on('blur',function () {
         $("#submit").click();
     })
+</script>
+<script>
+    NProgress.start();
+    NProgress.done();
 </script>
 </body>
 </html>

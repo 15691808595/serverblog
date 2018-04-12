@@ -12,6 +12,9 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 </head>
 <body>
 <?php
@@ -149,5 +152,9 @@ include_once "./tpl/modal.php";
 <!--<script src="js/adminVideoShow.js"></script>-->
 <!--<script src="js/lazyArticleTitle.js"></script>-->
 <!--<script src="js/adminComment.js"></script>-->
+<script>
+    NProgress.start();
+    NProgress.done();
+</script>
 </body>
 </html>

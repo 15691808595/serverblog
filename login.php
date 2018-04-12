@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="css/global.css">
 	<link rel="shortcut icon" href="./img/favicon.ico">
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <style>
 
         @media (max-width: 768px) {
@@ -81,5 +84,9 @@
 <!--    <script src="./js/login.js"></script>-->
     <script src="./js/min/common.min.js"></script>
     <script src="./js/min/login.min.js"></script>
+    <script>
+        NProgress.start();
+        NProgress.done();
+    </script>
 </body>
 </html>

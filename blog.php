@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="css/paging.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
 
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 
 </head>
 <body>
@@ -101,5 +104,9 @@
 <!--<script src="./js/blog.js"></script>-->
 <script src="./js/min/blog.min.js"></script>
 
+<script>
+    NProgress.start();
+    NProgress.done();
+</script>
 </body>
 </html>
