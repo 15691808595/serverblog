@@ -22,6 +22,9 @@ session_start();
     <<link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/life.css">
 	<link rel="shortcut icon" href="./img/favicon.ico">
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <style>
 
         @media (max-width: 768px) {
@@ -102,6 +105,10 @@ session_start();
     <script src="./js/min/fightAndInteresting.min.js"></script>
 
     <script src="js/min/life.min.js"></script>
+    <script>
+        NProgress.start();
+        NProgress.done();
+    </script>
 
 </body>
 </html>

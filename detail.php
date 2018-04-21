@@ -52,6 +52,9 @@ if (!$row['lastModify']) {
     <link rel="shortcut icon" href="./img/favicon.ico">
 
 
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <?php
     echo <<<tagName2
                                
@@ -353,6 +356,10 @@ include_once "./tpl/footer.php";
             $(".article-content.lead").wordExport($(".page-header").html());
         });
     });
+</script>
+<script>
+    NProgress.start();
+    NProgress.done();
 </script>
 </body>
 </html>

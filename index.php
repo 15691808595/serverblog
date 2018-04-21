@@ -15,6 +15,8 @@ session_start();
 
     <title>刘伟波的个人博客 &raquo; 刘伟波-天天向上</title>
 
+
+
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="./css/home.css">
@@ -27,6 +29,10 @@ session_start();
     <script src="./js/respond.js"></script>
     <![endif]-->
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+<!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <style>
         body{
             overflow: hidden;
@@ -217,5 +223,9 @@ mysql_query($sql);
 <script src="./js/min/fightAndInteresting.min.js"></script>
 
 <script src="./js/min/index.min.js"></script>
+<script>
+    NProgress.start();
+    NProgress.done();
+</script>
 </body>
 </html>

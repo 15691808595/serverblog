@@ -17,6 +17,9 @@ session_start();
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="editor/css/wangEditor.min.css">
     <link rel="shortcut icon" href="./img/favicon.ico">
+    <!--    网页加载进度条-->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 </head>
 
 <body>
@@ -113,6 +116,10 @@ tagname;
 <script src="./js/min/recommend.min.js"></script>
 <!--ajax发表文章-->
 <script src="./js/min/postArticle.min.js"></script>
+<script>
+    NProgress.start();
+    NProgress.done();
+</script>
 </body>
 
 </html>
