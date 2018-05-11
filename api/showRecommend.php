@@ -1,4 +1,5 @@
-﻿<?php session_start();
+﻿<?php session_start(); ?>
+<?php
 include_once "dbConnect.php";
 
     $sql = "select id,title,visitor from article2 where recommend=1";
