@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once "dbConnect.php";
 
 $sql = "select createTime from article2  order by createTime desc ";

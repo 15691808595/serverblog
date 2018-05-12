@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once "dbConnect.php";
 
 date_default_timezone_set('Asia/Shanghai');//设置时区

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include_once "dbConnect.php";
 $a_id=$_REQUEST['a_id'];

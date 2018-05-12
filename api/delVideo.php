@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include_once "dbConnect.php";
 //获取页码

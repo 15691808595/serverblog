@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include_once "./api/dbConnect.php";
 //根据传入的id从数据库获取相应文章的信息
